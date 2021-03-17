@@ -1,0 +1,30 @@
+body{
+    font-family: 'Arvo', serif;
+}
+/* login background */
+.login-background{
+    background: url(/images/logo3.PNG)no-repeat;
+    width: 100%;
+    height: 100vh;
+    margin-top: 50px;
+}
+/* login background on small screen  */
+@media (max-width: 767.98px) { 
+	.login-background {
+		display: none;
+	}
+}
+
+/* styling the login form  */
+.form-container{
+    width: 400px;
+    margin: auto;
+    
+    padding: 20px 30px;
+    border: 1px solid #dedede
+}
+.form-container:hover{
+    -webkit-box-shadow: 9px 13px 36px 11px rgba(17,69,9,1);
+-moz-box-shadow: 9px 13px 36px 11px rgba(17,69,9,1);
+box-shadow: 9px 13px 36px 11px rgba(17,69,9,1);
+}

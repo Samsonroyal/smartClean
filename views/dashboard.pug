@@ -1,0 +1,105 @@
+meta(charset="UTF-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+title /admin dashboard
+link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap", rel="stylesheet")
+link(rel="preconnect", href="https://fonts.gstatic.com")
+link(rel="stylesheet", href="css/bootstrap.min.css")
+link(rel="stylesheet", href="dashboard.css")
+link(rel="stylesheet", href="static/all.css")
+//  nav bar 
+//  end nav bar 
+//  side bar 
+nav.navbar.navbar-expand.d-flex.flex-column.align-item-start.bg-dark#sidebar
+  a(href="index.html")
+    img(src="images/logo3.PNG", alt, style="width: 60px; height: 60px; border-radius: 50%")
+  a.navbar-brand.text-light.mt-3(href="#")
+    .display-5.font-weight-bold Gabarecycle
+  ul.navbar-nav.d-flex.flex-column.mt-5.w-100
+    li.nav-item.w-100
+      a.nav-link.text-light.pl-4(href="#")
+        i.fas.fa-angle-right
+        | 
+Home
+
+    li.nav-item.dropdown.w-100
+      a.nav-link.dropdown-toggle.text-light#navbarDropdown(href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false")
+        i.fas.fa-angle-right
+        | 
+Drivers
+
+      ul.dropdown-menu.w-100(aria-labelledby="navbarDropdown")
+        li
+          a.dropdown-item.text-dark.pl-4.p-2(href="regDriver.html") Register Driver
+        li
+          hr.dropdown-divider
+        li
+          a.dropdown-item.text-dark.pl-4.p-2(href="#") View Driver
+    li.nav-item.dropdown.w-100
+      a.nav-link.dropdown-toggle.text-light#navbarDropdown(href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false")
+        i.fas.fa-angle-right
+        | 
+Conductors
+
+      ul.dropdown-menu.w-100(aria-labelledby="navbarDropdown")
+        li
+          a.dropdown-item.text-dark.pl-4.p-2(href="regConductor.html").
+            Register Conductor
+            
+        li
+          hr.dropdown-divider
+        li
+          a.dropdown-item.text-dark.pl-4.p-2(href="#") View Conductor
+    li.nav-item.dropdown.w-100
+      a.nav-link.dropdown-toggle.text-light#navbarDropdown(href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false")
+        i.fas.fa-angle-right
+        | 
+Trucks
+
+      ul.dropdown-menu.w-100(aria-labelledby="navbarDropdown")
+        li
+          a.dropdown-item.text-dark.pl-4.p-2(href="regTruck.html") Register Truck
+        li
+          hr.dropdown-divider
+        li
+          a.dropdown-item.text-dark.pl-4.p-2(href="#") View Trucks
+    li.nav-item.dropdown.w-100
+      a.nav-link.dropdown-toggle.text-light#navbarDropdown(href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false")
+        i.fas.fa-angle-right
+        | 
+Customer Requests
+
+      ul.dropdown-menu.w-100(aria-labelledby="navbarDropdown")
+        li
+          a.dropdown-item.text-dark.pl-4.p-2(href) View Customer Requests
+        li
+          hr.dropdown-divider
+        li
+          a.dropdown-item.text-dark.pl-4.p-2(href="#") Assign Truck and Driver
+    li.nav-item.w-100
+      a.nav-link.text-light.pl-4(href="#")
+        i.fas.fa-angle-right
+        | 
+Payments
+
+//  end side bar 
+//  main content 
+.p-4.my-container
+  button.btn.my-4#menu-btn
+    i.fas.fa-bars
+  h2 Hello Admin
+//  end of main content   
+script(src="js/bootstrap.bundle.js")
+script(src="static/all.js")
+script.
+  
+  var menu_btn = document.querySelector("#menu-btn");
+      var sidebar = document.querySelector("#sidebar");
+      var container = document.querySelector(".my-container");
+  
+      const handl = () => {
+        sidebar.classList.toggle("active-nav");
+        container.classList.toggle("active-cont");
+      };
+      menu_btn.addEventListener("click", handl);
+  

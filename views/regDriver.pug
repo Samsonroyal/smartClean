@@ -1,0 +1,61 @@
+meta(charset="UTF-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+title /register driver
+link(rel="preconnect", href="https://fonts.gstatic.com")
+link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap", rel="stylesheet")
+link(rel="stylesheet", href="css/bootstrap.min.css")
+link(rel="stylesheet", href="style.css")
+.regDriver
+  .container
+    .row
+      .col-lg-3
+      .col-lg-6
+        #ui
+          h2.text-light.text-center Register Driver
+          form.text-center
+            .mb-3
+              label.form-label.text-light(for="name") Name
+              input.form-control(type="text", placeholder="username")
+            .row
+              .col
+                .mb-3
+                  label.form-label.text-light(for="gender") Gender
+                  select.form-select(aria-label="Default select example")
+                    option(selected) Male
+                    option(value="1") Female
+                    option(value="2") Other
+              .col
+                .mb-3
+                  label.form-label.text-light(for="name") Contact
+                  input.form-control(type="tel", placeholder="+256-xxx-xxxxxx")
+            .row
+              .col
+                .mb-3
+                  label.form-label.text-light(for="name") Date Of Birth
+                  input.form-control(type="date", placeholder="D.O.B")
+              .col
+                .mb-3
+                  label.form-label.text-light(for="residence") Residence
+                  input.form-control(type="text", placeholder="residence")
+            .row
+              .col
+                .mb-3
+                  label.form-label.text-light(for="nin") NIN
+                  input.form-control(type="text", placeholder="national id number")
+              .col
+                .mb-3
+                  label.form-label.text-light(for="license") Licence number
+                  input.form-control(type="text", placeholder="license number")
+            .mb-3
+              label.form-label.text-light(for="name") Police letter
+              input.form-control(type="file")
+            a(href="dashboard.html")
+              button.btn.btn-success.me-4(type="button").
+                
+                Back
+                
+            button.btn.btn-success(type="submit") Submit
+      .col-lg-3
+script(src="js/include.js")
+script(src="js/bootstrap.bundle.js")

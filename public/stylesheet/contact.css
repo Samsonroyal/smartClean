@@ -1,0 +1,70 @@
+body {
+  font-family: "Arvo", serif;
+}
+/* contact container  */
+.contactForm {
+  background-color: #dedede;
+}
+/* sontact us image  */
+.contactImage {
+  width: 300px;
+  margin-top: 0px 30px;
+}
+/* contact title  */
+.contactTitle {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 0.7rem;
+}
+/* contact information  */
+.contactInformation {
+  display: flex;
+  color: #555;
+  margin: 0.7rem 0;
+  align-items: center;
+  font-size: 0.95rem;
+}
+/* icons for contact  */
+.contactIcon {
+  width: 28px;
+  margin-right: 0.7rem;
+}
+/* contact us social media */
+.social-media {
+  padding: 2rem 0 0 0;
+}
+
+.social-media p {
+  color: #333;
+}
+
+.social-icons {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  background: linear-gradient(45deg, #056237, #056237);
+  color: #fff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 0.5rem;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.05);
+}
+ .contactContainer{
+  width: 420px;
+  
+  
+
+  
+ }
+
+/* contact us social media */

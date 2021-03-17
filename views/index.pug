@@ -1,0 +1,193 @@
+meta(charset="UTF-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+title Gabarecycle
+link(rel="preconnect", href="https://fonts.gstatic.com")
+link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap", rel="stylesheet")
+link(rel="stylesheet", href="css/bootstrap.min.css")
+link(rel="stylesheet", href="style.css")
+//  navigation bar 
+div(w3-include-html="navbar.html")
+//  first section 
+.topsection.bg-success(style="margin-top: 100px")
+  .container
+    .row
+      .col-xs-12.col-sm-12.col-md-12.col-lg-6.col-lg-offset-2.text-light
+        h1.topsectionh Gabarecycle
+        p.topsectionp
+          | 
+We are here to provide an environmentally friendly,efficient and effective garbage management system.
+          br
+          | 
+The current garbage collection system includes routine garbage trucks doing rounds daily or weekly,which not only doesn't cover every zone of the residential areas but is also completely inefficient
+
+        .topSectionSubtitle
+          p.topsectionp.bg-warning.text-success.p-5(style="border-radius: 40px").
+            
+            Gabarecycle is a cost effective web based application for Stay Clean NGO to utilize available resources to efficiently manage the overwhelming amounts of garbage collected each day. As well emptying latrines and septic tanks in residential areas.
+            
+      .col-lg-6.mb-5
+        img.myImageClass(src="images/Capture2.PNG", alt, style="width: 100%; height: 500px; margin-top: 30px")
+//  second section  
+div
+  section.secondsection.bg-light
+    .container
+      .row
+        div
+          h2.secondesection How we work
+        .col-xs-12.col-sm-12.col-md-6.col-lg-4
+          .card.mt-5(style="width: 18rem")
+            .card-header Step 1
+            img.card-img-top(src="./images/request.PNG", alt="...")
+            .card-body
+              p.card-text.
+                
+                Go into your browser and type in wwww.garecycle.com, sign up into our web application and make a request for a specific service needed.
+                
+        .col-xs-12.col-sm-12.col-md-6.col-lg-4
+          .card.mt-5(style="width: 18rem")
+            .card-header Step 2
+            img.card-img-top(src="./images/confirmOrder.PNG", alt="...")
+            .card-body
+              p.card-text.
+                
+                Our Admin will receive your request with your details and assign to you a truck with a driver for the specific service requested.You will be able to receive real-time staus updates of your request.
+                
+        .col-xs-12.col-sm-12.col-md-10.col-lg-4
+          .card.mt-5(style="width: 18rem")
+            .card-header Step 3
+            img.card-img-top(src="./images/trucksent.PNG", alt="...")
+            .card-body
+              p.card-text.
+                
+                Our trucks will be able to come to your place of residence to carry out the service requested by the client.
+                
+//  third section(services) 
+div
+  section.thirdsection
+    .container
+      div
+        h2.text-center.pt-5 Services
+      .row
+        .col-xs-12.col-sm-12.col-md-6.col-lg-6
+          .card.mt-5(style="width: 25rem")
+            img.card-img-top(src="images/Capture11.PNG", alt="...")
+            .card-body
+              h5.card-title Garbage Collection Services
+              p.card-text.
+                
+                We offer residential garbage collection services around areas in Kampala. You just need to sign up using our web application Gabercycle and we shall handle your weekly garbage collection effectively and efficiently.
+                
+              a.btn.btn-success(href="#") Get Started
+        .col-xs-12.col-sm-12.col-md-0.col-lg-6
+          .card.mt-5(style="width: 25rem")
+            img.card-img-top(src="images/sewage1 (1).png", alt="...")
+            .card-body
+              h5.card-title.
+                
+                Septic tank & Latrine Emptying Services
+                
+              p.card-text.
+                
+                At SmartClean we offer scheduled sewage watse disposal through our web application Gabercycle by emptying latrines and septic tanks. It is important to ensure the safe disposal of these contaminants to protect your health and safety.
+                
+              a.btn.btn-success(href="#") Get Started
+//  forth section (FAQS) 
+#faqs
+  .container
+    .row
+      .col-lg-8.offset-lg-2
+        h2.text-center Frequently Asked Questions
+        .text-center
+          img(src="images/undraw_Questions_re_1fy7.svg", alt, style="height: 100px; width: 100px")
+        .accordion.mt-5#accordionExample
+          .accordion-item
+            h2.accordion-header#headingOne
+              button.accordion-button(type="button", data-bs-toggle="collapse", data-bs-target="#collapseOne", aria-expanded="true", aria-controls="collapseOne")
+                strong Do you work on public holidays?
+            #collapseOne.accordion-collapse.collapse.show(aria-labelledby="headingOne", data-bs-parent="#accordionExample")
+              .accordion-body.
+                
+                No, we respect public holidays as we also give our stuff a chance to rest.
+                
+          .accordion-item
+            h2.accordion-header#headingTwo
+              button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#collapseTwo", aria-expanded="false", aria-controls="collapseTwo")
+                strong How can I pay for the service requsted?
+            #collapseTwo.accordion-collapse.collapse(aria-labelledby="headingTwo", data-bs-parent="#accordionExample")
+              .accordion-body.
+                
+                You can pay when the truck driver comes to perform the service. Alternatively you can send money via mobile money indicating the service you are paying for.
+                
+          .accordion-item
+            h2.accordion-header#headingThree
+              button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#collapseThree", aria-expanded="false", aria-controls="collapseThree")
+                strong What are the prices for the services being offered?
+            #collapseThree.accordion-collapse.collapse(aria-labelledby="headingThree", data-bs-parent="#accordionExample")
+              .accordion-body
+                | 
+We charge
+                br
+                | 
+Garbage collection : Twenty five thousand Uganda shillings(UGX 25,000)
+                br
+                | 
+Latrine and Septic Tank Emptying :One hundred seventy five thousand Uganda shillings(UGX 175,000)
+                br
+                | 
+This money for the above services weekly.
+
+          .accordion-item
+            h2.accordion-header#headingFour
+              button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#collapseFour", aria-expanded="false", aria-controls="collapseFour")
+                strong Do you have any subscription packages?
+            #collapseFour.accordion-collapse.collapse(aria-labelledby="headingFour", data-bs-parent="#accordionExample")
+              .accordion-body
+                | 
+Yes, we offer subscription packages which lasts for six months with a discount.
+                br
+                | 
+Garbage collection : Twenty thousand Uganda shillings(UGX 20,000)
+                br
+                | 
+Latrine and Septic Tank Emptying :One hundred sixty thousand Uganda shillings(UGX 160,000)
+                br
+                | 
+This money for the above services weekly.
+
+          .accordion-item
+            h2.accordion-header#headingFive
+              button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#collapseFive", aria-expanded="false", aria-controls="collapseFive")
+                strong Do you provide garbage polythene bags?
+            #collapseFive.accordion-collapse.collapse(aria-labelledby="headingFive", data-bs-parent="#accordionExample")
+              .accordion-body.
+                
+                No, we don't provide them. But we can sell them to you separately.
+                
+          .accordion-item
+            h2.accordion-header#headingSix
+              button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#collapseSix", aria-expanded="false", aria-controls="collapseSix")
+                strong What are your working hours?
+            #collapseSix.accordion-collapse.collapse(aria-labelledby="headingSix", data-bs-parent="#accordionExample")
+              .accordion-body.
+                
+                We work from Monday to Friday from 8:00 am EAT to 4:00 pm EAT.
+                
+//  forth section  
+//  fifth section  
+.forthSection.py-5(style="background-color: #dedede")
+  .container
+    .row
+      .col-lg-12.col-md-12.col-sm-12
+        .text-center
+          img.thinkingImage(src="images/thinking.svg", alt)
+        h3.text-center.text-success Is this something for you?
+        .text-center
+          button.btn.btn-outline-success(type="button").
+            
+            Log in / Register
+            
+          button.btn.btn-success(type="button") Contact Us
+div(w3-include-html="footer.html")
+script(src="js/include.js")
+script(src="js/bootstrap.bundle.js")
