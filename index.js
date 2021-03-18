@@ -20,7 +20,11 @@ app.get('/',(req,res)=>{
     res.render('index')
 })
 
-app.get('/about',(req,res)=>{
+app.get('/index',(req,res)=>{
+    res.render('index')
+})
+
+app.get('/aboutus',(req,res)=>{
     res.render('aboutus')
 })
 
@@ -28,7 +32,7 @@ app.get('/contact',(req,res)=>{
     res.render('contact')
 })
 
-app.get('/customer_signup',(req,res)=>{
+app.get('/customerSignup',(req,res)=>{
     res.render('customerSignup')
 })
 
@@ -40,15 +44,15 @@ app.get('/login',(req,res)=>{
     res.render('login')
 })
 
-app.get('/registerConductor',(req,res)=>{
+app.get('/regConductor',(req,res)=>{
     res.render('regConductor')
 })
 
-app.get('/registerDriver',(req,res)=>{
+app.get('/regDriver',(req,res)=>{
     res.render('regDriver')
 })
 
-app.get('/registerTruck',(req,res)=>{
+app.get('/regTruck',(req,res)=>{
     res.render('regTruck')
 })
 

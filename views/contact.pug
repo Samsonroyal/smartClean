@@ -1,70 +1,74 @@
-meta(charset="UTF-8")
-meta(http-equiv="X-UA-Compatible", content="IE=edge")
-meta(name="viewport", content="width=device-width,initial-scale=1")
-title /contact Us
-link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap", rel="stylesheet")
-link(rel="preconnect", href="https://fonts.gstatic.com")
-link(rel="stylesheet", href="css/bootstrap.min.css")
-link(rel="stylesheet", href="contact.css")
-link(rel="stylesheet", href="static/all.css")
-div(w3-include-html="navbar.html")
-.contactForm(style="margin-top: 100px")
-  .container
-    .row
-      .text-center.m-5
-        img.contactImage(src="images/undraw_contact_us_15o2.svg", alt)
-      .col-xs-12.col-sm-12.col-md-6.col-lg-6.bg-light.my-3.rounded.border.border-success.px-5.py-5
-        h3.contactTitle.text-success Let's get in touch
-        p.text
-          | 
-We always want to hear from you. Contact us from this section.
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    title /contact Us
+    link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap", rel="stylesheet")
+    link(rel="preconnect", href="https://fonts.gstatic.com")
+    link(rel="stylesheet", href="/stylesheet/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/stylesheet/contact.css")
+    link(rel="stylesheet", href="/stylesheet/static/all.css")
+  body 
+    include navbar.pug
+    .contactForm(style="margin-top: 100px")
+      .container
+        .row
+          .text-center.m-5
+            img.contactImage(src="images/undraw_contact_us_15o2.svg", alt)
+          .col-xs-12.col-sm-12.col-md-6.col-lg-6.bg-light.my-3.rounded.border.border-success.px-5.py-5
+            h3.contactTitle.text-success Let's get in touch
+            p.text
+              | We always want to hear from you. Contact us from this section.
 
-          br
-          | 
-Or reach us via our socials , email. Alternatively you can visit our physical address for more details.
 
-        div
-          //  contact information 
-          .contactInformation
-            img.contactIcon(src="images/location.png", alt)
-            p 1st Floor Community Service, Kironde Rd Muyenga
-          .contactInformation
-            img.contactIcon(src="images/email.png", alt)
-            p info@gabarecycle.com
-          .contactInformation
-            img.contactIcon(src="images/phone.png", alt)
-            p +256-777-533160
-          //  contact us social media  
-          .social-media
-            p Connect with us :
-            .social-icons
-              a(href="#")
-                i.fab.fa-facebook-f
-              a(href="#")
-                i.fab.fa-twitter
-              a(href="#")
-                i.fab.fa-instagram
-      .col-xs-12.col-sm-12.col-md-12.col-lg-6.my-3
-        form.bg-success.contactContainer.px-5.py-5.rounded(action)
-          h3.text-center.text-white Contact us
-          .mb-3
-            label.form-label.text-light(for="userName") Name
-            input.form-control#exampleFormControlInput1(type="text", placeholder="user name")
-          .mb-3
-            label.form-label.text-light(for="exampleFormControlInput1") Email address
-            input.form-control#exampleFormControlInput1(type="email", placeholder="name@example.com")
-          .mb-3
-            label.form-label.text-light(for="phoneNumber") Phone
-            input.form-control#exampleFormControlInput1(type="tel", placeholder="+256-xxx-xxxxxx")
-          .mb-3
-            label.form-label.text-light(for="message") Message
-            textarea.form-control#exampleFormControlTextarea1(rows="3")
-          .text-center
-            button.btn.btn-light.btn-lg.text-success(type="button").
-              
-              Send
-              
-div(w3-include-html="footer.html")
-script(src="js/include.js")
-script(src="js/bootstrap.bundle.js")
-script(src="static/all.js")
+              br
+              | Or reach us via our socials , email. Alternatively you can visit our physical address for more details.
+
+
+            div
+              //  contact information 
+              .contactInformation
+                img.contactIcon(src="images/location.png", alt)
+                p 1st Floor Community Service, Kironde Rd Muyenga
+              .contactInformation
+                img.contactIcon(src="images/email.png", alt)
+                p info@gabarecycle.com
+              .contactInformation
+                img.contactIcon(src="images/phone.png", alt)
+                p +256-777-533160
+              //  contact us social media  
+              .social-media
+                p Connect with us :
+                .social-icons
+                  a(href="#")
+                    i.fab.fa-facebook-f
+                  a(href="#")
+                    i.fab.fa-twitter
+                  a(href="#")
+                    i.fab.fa-instagram
+          .col-xs-12.col-sm-12.col-md-12.col-lg-6.my-3
+            form.bg-success.contactContainer.px-5.py-5.rounded(action)
+              h3.text-center.text-white Contact us
+              .mb-3
+                label.form-label.text-light(for="userName") Name
+                input.form-control#exampleFormControlInput1(type="text", placeholder="user name")
+              .mb-3
+                label.form-label.text-light(for="exampleFormControlInput1") Email address
+                input.form-control#exampleFormControlInput1(type="email", placeholder="name@example.com")
+              .mb-3
+                label.form-label.text-light(for="phoneNumber") Phone
+                input.form-control#exampleFormControlInput1(type="tel", placeholder="+256-xxx-xxxxxx")
+              .mb-3
+                label.form-label.text-light(for="message") Message
+                textarea.form-control#exampleFormControlTextarea1(rows="3")
+              .text-center
+                button.btn.btn-light.btn-lg.text-success(type="button").
+                  
+                  Send
+                  
+    include footer.pug
+    script(src="js/include.js")
+    script(src="js/bootstrap.bundle.js")
+    script(src="static/all.js")

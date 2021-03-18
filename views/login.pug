@@ -1,54 +1,58 @@
-meta(charset="UTF-8")
-meta(http-equiv="X-UA-Compatible", content="IE=edge")
-meta(name="viewport", content="width=device-width,initial-scale=1")
-title /login
-link(rel="preconnect", href="https://fonts.gstatic.com")
-link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap", rel="stylesheet")
-link(rel="stylesheet", href="css/bootstrap.min.css")
-link(rel="stylesheet", href="login.css")
-div(w3-include-html="navbar.html")
-div(style="margin-top: 100px")
-  .container
-    .row
-      .col-12.col-md-5.col-lg-6
-        h1.login-title.text-center.mb-5.text-success.
-          
-          Log in to Gabarecycle
-          
-        form.form-container.mb-5
-          .mb-3
-            label.form-label(for="exampleInputEmail1") Email address
-            input.form-control#exampleInputEmail1(type="email", aria-describedby="emailHelp")
-          .mb-3
-            label.form-label(for="userRole") User role
-            select.form-select(aria-label="Default select example")
-              option(selected) Admin
-              option(value="2") Client
-          .mb-3
-            label.form-label(for="exampleInputPassword1") Password
-            input.form-control#exampleInputPassword1(type="password")
-            .extra.mt-3.row.justify-content-between
-              .col-6
-                .form-check
-                  input.form-check-input#RememberPassword(type="checkbox")
-                  label.form-check-label(for="RememberPassword").
-                    
-                    Remember me
-                    
-              .col-6
-                .forgot-password.text-right
-                  a.link-success(href="reset-password.html") Forgot password?
-          .d-grid.gap-2.m-5
-            button.btn.btn-success(type="submit") Log in
-        .text-center.mb-5
-          | 
-No Account? Sign up
+doctype html
+html 
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    title /login
+    link(rel="preconnect", href="https://fonts.gstatic.com")
+    link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap", rel="stylesheet")
+    link(rel="stylesheet", href="/stylesheet/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/stylesheet/login.css")
+  body 
+    include navbar.pug
+    div(style="margin-top: 100px")
+      .container
+        .row
+          .col-12.col-md-5.col-lg-6
+            h1.login-title.text-center.mb-5.text-success.
+              
+              Log in to Gabarecycle
+              
+            form.form-container.mb-5
+              .mb-3
+                label.form-label(for="exampleInputEmail1") Email address
+                input.form-control#exampleInputEmail1(type="email", aria-describedby="emailHelp")
+              .mb-3
+                label.form-label(for="userRole") User role
+                select.form-select(aria-label="Default select example")
+                  option(selected) Admin
+                  option(value="2") Client
+              .mb-3
+                label.form-label(for="exampleInputPassword1") Password
+                input.form-control#exampleInputPassword1(type="password")
+                .extra.mt-3.row.justify-content-between
+                  .col-6
+                    .form-check
+                      input.form-check-input#RememberPassword(type="checkbox")
+                      label.form-check-label(for="RememberPassword").
+                        
+                        Remember me
+                        
+                  .col-6
+                    .forgot-password.text-right
+                      a.link-success(href="reset-password.html") Forgot password?
+              .d-grid.gap-2.m-5
+                button.btn.btn-success(type="submit") Log in
+            .text-center.mb-5
+              | No Account? Sign up
 
-          a.text-link.link-success(href="customerSignup.html") here
-          | .
 
-      .col-12.col-md-5.col-lg-6.mt-5
-        .login-background
-div(w3-include-html="footer.html")
-script(src="js/bootstrap.bundle.js")
-script(src="js/include.js")
+              a.text-link.link-success(href="customerSignup") here
+              | .
+
+          .col-12.col-md-5.col-lg-6.mt-5
+            .login-background
+    include footer.pug
+    script(src="js/bootstrap.bundle.js")
+    script(src="js/include.js")

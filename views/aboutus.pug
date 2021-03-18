@@ -1,55 +1,59 @@
-meta(charset="UTF-8")
-meta(http-equiv="X-UA-Compatible", content="IE=edge")
-meta(name="viewport", content="width=device-width,initial-scale=1")
-title /about
-link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap", rel="stylesheet")
-link(rel="preconnect", href="https://fonts.gstatic.com")
-link(rel="stylesheet", href="css/bootstrap.min.css")
-link(rel="stylesheet", href="style.css")
-div(w3-include-html="navbar.html")
-//  about us main section  
-main.aboutusmain(style="margin-top: 100px")
-  .container
-    div
-      img(src="images/zibik-iR4mClggzEU-unsplash.jpg", alt, style="max-width: 100%")
-      h1.text-center.mt-3 ABOUT US
-    .row
-      .col-lg-8(mb-4)
-        p.text-justify
-          | 
-Gabarecycle is a cost effective web based application for Stay Clean NGO to utilize available resources to efficiently manage the overwhelming amounts of garbage collected each day. As well emptying latrines and septic tanks in residential areas.
-          br
-          br
-          | 
-Garbage Management and Collection in our society is a major concern and emerging problem. This has resulted into overflowing waste bins in people’s homes as well as surrounding areas, this occurs due to the delay of garbage collecting companies to pick the garbage hence leading to an unhygienic condition in the nearby area.
-          br
-          br
-          | 
-So in order to solve the above problems, StayClean came up with the idea of Garbage management system that will aid in enabling customers make requests for their garbage to be picked once a week at their convenience.
-          br
-          br
-          | 
-However it has also been noticed that homesteads find it difficult to empty their latrines as well as septic tanks. So inorder to solve that, we also offer septic tank and latrine emptying as a service through our Gabarecycle web application by just using your gadget you can make a request and we will help you out.
+doctype html
+html 
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    title /about
+    link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap", rel="stylesheet")
+    link(rel="preconnect", href="https://fonts.gstatic.com")
+    link(rel="stylesheet", href="/stylesheet/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/stylesheet/style.css")
+  body 
+    include navbar.pug
+    //  about us main section  
+    main.aboutusmain(style="margin-top: 100px")
+      .container
+        div
+          img(src="images/zibik-iR4mClggzEU-unsplash.jpg", alt, style="max-width: 100%")
+          h1.text-center.mt-3 ABOUT US
+        .row
+          .col-lg-8(mb-4)
+            p.text-justify
+              | Gabarecycle is a cost effective web based application for Stay Clean NGO to utilize available resources to efficiently manage the overwhelming amounts of garbage collected each day. As well emptying latrines and septic tanks in residential areas.
+    
+              br
+              br
+              | Garbage Management and Collection in our society is a major concern and emerging problem. This has resulted into overflowing waste bins in people’s homes as well as surrounding areas, this occurs due to the delay of garbage collecting companies to pick the garbage hence leading to an unhygienic condition in the nearby area.
+    
+              br
+              br
+              | So in order to solve the above problems, StayClean came up with the idea of Garbage management system that will aid in enabling customers make requests for their garbage to be picked once a week at their convenience.
+    
+              br
+              br
+              | However it has also been noticed that homesteads find it difficult to empty their latrines as well as septic tanks. So inorder to solve that, we also offer septic tank and latrine emptying as a service through our Gabarecycle web application by just using your gadget you can make a request and we will help you out.
 
-        h4
-          strong Is this something you have been looking for?click on the button below and let us connect.
-        button.btn.btn-success.btn-sm.mb-5(type="button").
-          
-          Let's Get Started
-          
-      //  side bar 
-      .col-lg-4(mb-4)
-        section#sidebar.sticky-top(style="top: 80px")
-          .bg-image.mb-4.bg-success
-            a(href)
-              img.w-100(src="images/Capture10.PNG", alt="Sample")
-              .d-flex.justify-content-center.align-items-center.h-100
-                p.text-white.mb-0 Garbage collection
-          .bg-image.bg-success.mb-4
-            a(href)
-              img.w-100(src="images/sewagetruck.PNG", alt="Sample")
-              .d-flex.justify-content-center.align-items-center.h-100
-                p.text-white.mb-0 Septic tank emptying
-div(w3-include-html="footer.html")
-script(src="js/include.js")
-script(src="js/bootstrap.bundle.js")
+    
+            h4
+              strong Is this something you have been looking for?click on the button below and let us connect.
+            button.btn.btn-success.btn-sm.mb-5(type="button").
+              
+              Let's Get Started
+              
+          //  side bar 
+          .col-lg-4(mb-4)
+            section#sidebar.sticky-top(style="top: 80px")
+              .bg-image.mb-4.bg-success
+                a(href)
+                  img.w-100(src="images/Capture10.PNG", alt="Sample")
+                  .d-flex.justify-content-center.align-items-center.h-100
+                    p.text-white.mb-0 Garbage collection
+              .bg-image.bg-success.mb-4
+                a(href)
+                  img.w-100(src="images/sewagetruck.PNG", alt="Sample")
+                  .d-flex.justify-content-center.align-items-center.h-100
+                    p.text-white.mb-0 Septic tank emptying
+    include footer.pug
+    script(src="js/include.js")
+    script(src="js/bootstrap.bundle.js")

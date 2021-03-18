@@ -1,49 +1,53 @@
-meta(charset="UTF-8")
-meta(http-equiv="X-UA-Compatible", content="IE=edge")
-meta(name="viewport", content="width=device-width,initial-scale=1")
-title /register Conductor
-link(rel="preconnect", href="https://fonts.gstatic.com")
-link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap", rel="stylesheet")
-link(rel="stylesheet", href="css/bootstrap.min.css")
-link(rel="stylesheet", href="style.css")
-.regConductor
-  .container
-    .row
-      .col-lg-3
-      .col-lg-6
-        #ui
-          h2.text-light.text-center Register Conductor
-          form.text-center(action)
-            .mb-3
-              label.form-label.text-light(for="name") Name
-              input.form-control(type="text", placeholder="username")
-            .row
-              .col
+doctype html
+html 
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    title /register Conductor
+    link(rel="preconnect", href="https://fonts.gstatic.com")
+    link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap", rel="stylesheet")
+    link(rel="stylesheet", href="/stylesheet/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/stylesheet/style.css")
+  body
+    .regConductor
+      .container
+        .row
+          .col-lg-3
+          .col-lg-6
+            #ui
+              h2.text-light.text-center Register Conductor
+              form.text-center(action)
                 .mb-3
-                  label.form-label.text-light(for="gender") Gender
-                  select.form-select(aria-label="Default select example")
-                    option(selected) Male
-                    option(value="1") Female
-                    option(value="2") Other
-              .col
+                  label.form-label.text-light(for="name") Name
+                  input.form-control(type="text", placeholder="username")
+                .row
+                  .col
+                    .mb-3
+                      label.form-label.text-light(for="gender") Gender
+                      select.form-select(aria-label="Default select example")
+                        option(selected) Male
+                        option(value="1") Female
+                        option(value="2") Other
+                  .col
+                    .mb-3
+                      label.form-label.text-light(for="name") Contact
+                      input.form-control(type="tel", placeholder="+256-xxx-xxxxxx")
+                .row
+                  .col
+                    .mb-3
+                      label.form-label.text-light(for="name") Date Of Birth
+                      input.form-control(type="date", placeholder="D.O.B")
+                  .col
+                    .mb-3
+                      label.form-label.text-light(for="residence") Residence
+                      input.form-control(type="text", placeholder="residence")
                 .mb-3
-                  label.form-label.text-light(for="name") Contact
-                  input.form-control(type="tel", placeholder="+256-xxx-xxxxxx")
-            .row
-              .col
-                .mb-3
-                  label.form-label.text-light(for="name") Date Of Birth
-                  input.form-control(type="date", placeholder="D.O.B")
-              .col
-                .mb-3
-                  label.form-label.text-light(for="residence") Residence
-                  input.form-control(type="text", placeholder="residence")
-            .mb-3
-              label.form-label.text-light(for="nin") NIN
-              input.form-control(type="text", placeholder="national id number")
-            a(href="dashboard.html")
-              button.btn.btn-success(type="button") Back
-            button.btn.btn-success(type="submit") Submit
-      .col-lg-3
-script(src="js/include.js")
-script(src="js/bootstrap.bundle.js")
+                  label.form-label.text-light(for="nin") NIN
+                  input.form-control(type="text", placeholder="national id number")
+                a(href="dashboard")
+                  button.btn.btn-success.me-4(type="button") Back
+                button.btn.btn-success(type="submit") Submit
+          .col-lg-3
+    script(src="js/include.js")
+    script(src="js/bootstrap.bundle.js")
