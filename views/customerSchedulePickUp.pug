@@ -1,0 +1,71 @@
+doctype html 
+html 
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    title /Schedule pickup
+    link(rel="preconnect", href="https://fonts.gstatic.com")
+    link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap", rel="stylesheet")
+    link(rel="stylesheet", href="/stylesheet/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/stylesheet/style.css")
+  body 
+    .schedulePickup
+      .container
+        .row
+          .col-lg-3
+          .col-lg-6
+            #ui
+              h2.text-light.text-center Schedule pickup
+              form.text-center(action)
+                .row
+                  .col
+                    .mb-3
+                      label.form-label.text-light(for="name") Name
+                      input.form-control(type="text", placeholder="username")
+                  .col
+                    .mb-3
+                      label.form-label.text-light(for="nin") NIN
+                      input.form-control(type="text", placeholder="national id number")
+                .row
+                  .col
+                    .mb-3
+                      label.form-label.text-light(for="name") Contact
+                      input.form-control(type="tel", placeholder="+256-xxx-xxxxxx")
+                  .col
+                    .mb-3
+                      label.form-label.text-light(for="location") Location
+                      input.form-control(type="text", placeholder="location")
+                .row
+                  .col
+                    .mb-3
+                      label.form-label.text-light(for="service") Service
+                      select.form-select(aria-label="Default select example")
+                        option(selected) Garbage Collection
+                        option(value="1") Sewage emptying
+                  .col
+                    .mb-3
+                      label.form-label.text-light(for="requestType") Request Type
+                      select.form-select(aria-label="Default select example")
+                        option(selected) One Time
+                        option(value="1") Subscription
+                .row
+                  .col
+                    .mb-3
+                      label.form-label.text-light(for="time") Request Time
+                      input.form-control(type="time")
+                  .col
+                    .mb-3
+                      label.form-label.text-light(for="numberOfConductors") Conductor(s)
+                      input.form-control(type="number", placeholder="conductors needed")
+                .mb-3
+                  label.form-label.text-light(for="serviceFee") Service fee
+                  input.form-control(type="text")
+                a(href="customerPage")
+                  button.btn.btn-success.me-4(type="button").
+                    
+                    Back
+                    
+                button.btn.btn-success(type="submit") Submit
+          .col-lg-3
+    script(src="js/bootstrap.bundle.js")

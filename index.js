@@ -56,6 +56,13 @@ app.get('/regTruck',(req,res)=>{
     res.render('regTruck')
 })
 
+app.get('/customerPage',(req,res)=>{
+    res.render('customerPage')
+})
+
+app.get('/customerSchedulePickUp',(req,res)=>{
+    res.render('customerSchedulePickUp')
+})
 
 
 
