@@ -1,0 +1,148 @@
+doctype html 
+html 
+    head 
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width,initial-scale=1")
+        title=title 
+        link(rel="preconnect", href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap", rel="stylesheet")
+        link(rel="stylesheet", href="/stylesheet/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/stylesheet/style.css")
+    body 
+        block content
+                        //  Navbar 
+            nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+            //  Container wrapper 
+            .container-fluid
+                //  Navbar brand 
+                nav.navbar.navbar-light.bg-dark
+                .container-fluid
+                    a.navbar-brand(href="#")
+                    img.d-inline-block.align-top(src="../images/logo3.PNG", alt, width="60px", height="60")
+                    span.navbar-brand.mb-0.h1 Gabarecycle
+                //  Toggle button 
+                button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarSupportedContent", aria-controls="navbarSupportedContent", aria-expanded="false", aria-label="Toggle navigation")
+                span.navbar-toggler-icon
+                //  Collapsible wrapper 
+                .collapse.navbar-collapse#navbarSupportedContent
+                ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+                    li.nav-item
+                    a.nav-link.active(aria-current="page", href="index") Home
+                    li.nav-item
+                    a.nav-link(href="aboutus") About Us
+                    //  Navbar dropdown 
+                    li.nav-item.dropdown
+                    a.nav-link.dropdown-toggle#navbarDropdown(href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false").
+                        
+                        Services
+                        
+                    //  Dropdown menu 
+                    ul.dropdown-menu(aria-labelledby="navbarDropdown")
+                        li
+                        a.dropdown-item(href="#") Residential Garbage pickup
+                        li
+                        hr.dropdown-divider
+                        li
+                        a.dropdown-item(href="#") Emptying latrines
+                        li
+                        hr.dropdown-divider
+                        li
+                        a.dropdown-item(href="#") Emptying Septic Tanks
+                    li.nav-item
+                    a.nav-link(href="contact") Contact Us
+                a(href="login")
+                    button.btn.btn-success(type="submit") LOGIN/REGISTER 
+
+        block footer
+         .row
+            .col-12
+                footer.text-light.text-center.text-lg-start(style="background-color: rgb(39, 37, 37)")
+                //  Grid container 
+                .container.p-4
+                    // Grid row
+                    .row
+                    // Grid column
+                    .col-lg-6.col-md-12.mb-4.mb-md-0
+                        img.d-inline-block.align-top(src="../images/logo3.PNG", alt, width="60px", height="60")
+                        h5.text-uppercase Gabarecycle
+                        p
+                        | Gabarecycle is a cost effective web based application for SmartClean NGO that provides garbage management services as well as latrine and septic Tank emptying services to residential areas around Kampala.
+
+
+                        br
+                        br
+                        em Visit Us:
+                        br
+                        | StayClean 1st Floor Muyenga Community Service
+
+                        br
+                        | Plot 1977/245
+
+                        br
+                        | Kironde Road,Muyenga
+
+                        br
+                        | Kampala, Uganda
+
+
+                    // Grid column
+                    // Grid column
+                    .col-lg-3.col-md-6.mb-4.mb-md-0
+                        h5.text-uppercase navigate site
+                        ul.list-unstyled.mb-0
+                        li
+                            a.text-white.footerlink(href="index") Home
+                        li
+                            a.text-white.footerlink(href="aboutus") About Us
+                        li
+                            a.text-white.footerlink(href="#!") Services
+                        li
+                            a.text-white.footerlink(href="contact") Contact Us
+                    // Grid column
+                    // Grid column
+                    .col-lg-3.col-md-6.mb-4.mb-md-0
+                        h5.text-uppercase.mb-0 Drop us a line
+                        p.
+                        
+                        We always love to hear from you. Contact us from the section below.
+                        
+                        form
+                        //  Name input 
+                        .form-outline.mb-4
+                            input#form4Example1.form-control(type="text")
+                            label.form-label(for="form4Example1") Name
+                        //  Email input 
+                        .form-outline.mb-4
+                            input#form4Example2.form-control(type="email")
+                            label.form-label(for="form4Example2") Email address
+                        //  Message input 
+                        .form-outline.mb-4
+                            textarea.form-control#form4Example3(rows="4")
+                            label.form-label(for="form4Example3") Message
+                        //  Checkbox 
+                        .form-check.d-flex.justify-content-center.mb-4
+                            input.form-check-input.me-2#form4Example4(type="checkbox", checked)
+                            label.form-check-label(for="form4Example4").
+                            
+                            Send me a copy of this message
+                            
+                        //  Submit button 
+                        button.btn.btn-success.btn-block.mb-4(type="submit").
+                            
+                            Send
+                            
+                    // Grid column
+                    // Grid row
+                //  Grid container 
+                //  Copyright 
+                .text-center.p-3(style="background-color: rgba(0, 0, 0, 0.2)")
+                    p
+                    em Gabarecycle 2021 images:
+                    a.legal-link(href="https://www.freepik.com/?__hstc=57440181.d015967c9076614fc296f3b350bbdf81.1558954754717.1558954754717.1558954754717.1&__hssc=57440181.23.1558954754717&__hsfp=1065412370", target="_blank")
+                        em Freepik
+                    | © 2021 Copyright:
+
+
+                    a.text-white(href="https://mdbootstrap.com/") DintonHarold.com
+                //  Copyright 

@@ -1,5 +1,6 @@
 //dependencies
 const express =require('express')
+const router=require("./routes/router.js")
 
 
 //instatiations
@@ -12,57 +13,13 @@ app.set('views', './views');
 
 //middleware
 app.use(express.static('public'));
+app.use(express.urlencoded({extended:false}));
+app.use(express.json())
 
-
+app.use('/',router)
 
 //routes
-app.get('/',(req,res)=>{
-    res.render('index')
-})
 
-app.get('/index',(req,res)=>{
-    res.render('index')
-})
-
-app.get('/aboutus',(req,res)=>{
-    res.render('aboutus')
-})
-
-app.get('/contact',(req,res)=>{
-    res.render('contact')
-})
-
-app.get('/customerSignup',(req,res)=>{
-    res.render('customerSignup')
-})
-
-app.get('/dashboard',(req,res)=>{
-    res.render('dashboard')
-})
-
-app.get('/login',(req,res)=>{
-    res.render('login')
-})
-
-app.get('/regConductor',(req,res)=>{
-    res.render('regConductor')
-})
-
-app.get('/regDriver',(req,res)=>{
-    res.render('regDriver')
-})
-
-app.get('/regTruck',(req,res)=>{
-    res.render('regTruck')
-})
-
-app.get('/customerPage',(req,res)=>{
-    res.render('customerPage')
-})
-
-app.get('/customerSchedulePickUp',(req,res)=>{
-    res.render('customerSchedulePickUp')
-})
 
 
 
