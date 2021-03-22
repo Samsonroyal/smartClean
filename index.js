@@ -1,6 +1,13 @@
 //dependencies
 const express =require('express')
-const router=require("./routes/router.js")
+//path to file with the variable touter
+const homeRoute=require("./routes/homeRoutes")
+const registerRoute=require("./routes/registerRoutes")
+const signUpRoute=require("./routes/signUpRoutes")
+const loginRoute=require("./routes/loginRoutes")
+const contactRoute=require("./routes/contactRoute")
+const customerRoute=require("./routes/customerRoutes")
+const adminRoute=require("./routes/adminRoutes")
 
 
 //instatiations
@@ -16,9 +23,18 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json())
 
-app.use('/',router)
-
 //routes
+
+app.use('/',homeRoute)
+app.use('/',registerRoute)
+app.use('/',signUpRoute)
+app.use('/',loginRoute)
+app.use('/',contactRoute)
+app.use('/',customerRoute)
+app.use('/',adminRoute)
+
+
+
 
 
 
