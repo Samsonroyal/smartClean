@@ -31,11 +31,11 @@ app.use('/',homeRoute)
 app.use('/regConductor',registerConductorRoute)
 app.use('/regTruck',registerTruckRoute)
 app.use('/regDriver',registerDriverRoute)
-app.use('/',signUpRoute)
-app.use('/',loginRoute)
-app.use('/',contactRoute)
+app.use('/signUp',signUpRoute)
+app.use('/login',loginRoute)
+app.use('/contact',contactRoute)
 app.use('/',customerRoute)
-app.use('/',adminRoute)
+app.use('/adminDashboard',adminRoute)
 
 
 
