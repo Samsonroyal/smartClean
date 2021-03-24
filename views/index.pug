@@ -82,7 +82,7 @@ html
                     
                     We offer residential garbage collection services around areas in Kampala. You just need to sign up using our web application Gabercycle and we shall handle your weekly garbage collection effectively and efficiently.
                     
-                  a.btn.btn-success.my-2(href="#") Get Started
+                  a.btn.btn-success.my-2(href="login") Get Started
             .col-xs-12.col-sm-12.col-md-0.col-lg-6
               .card.mt-5.mb-3(style="width: 25rem")
                 img.card-img-top(src="images/sewage1 (1).png", alt="...")
@@ -95,7 +95,7 @@ html
                     
                     At SmartClean we offer scheduled sewage watse disposal through our web application Gabercycle by emptying latrines and septic tanks. It is important to ensure the safe disposal of these contaminants to protect your health and safety.
                     
-                  a.btn.btn-success(href="#") Get Started
+                  a.btn.btn-success(href="login") Get Started
     //  forth section (FAQS) 
     #faqs
       .container
@@ -187,11 +187,12 @@ html
               img.thinkingImage(src="images/thinking.svg", alt)
             h3.text-center.text-success Is this something for you?
             .text-center
-              button.btn.btn-outline-success.me-5(type="button").
+              a(href="login") 
+                button.btn.btn-outline-success.me-5(type="button").
                 
-                Log in / Register
-                
-              button.btn.btn-success(type="button") Contact Us
+                  Log in / Register
+              a(href="contact")  
+               button.btn.btn-success(type="button") Contact Us
     include footer.pug
     script(src="js/include.js")
     script(src="js/bootstrap.bundle.js")

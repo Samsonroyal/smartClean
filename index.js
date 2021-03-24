@@ -2,7 +2,9 @@
 const express =require('express')
 //path to file with the variable touter
 const homeRoute=require("./routes/homeRoutes")
-const registerRoute=require("./routes/registerRoutes")
+const registerConductorRoute=require("./routes/registerConductorRoutes")
+const registerTruckRoute=require("./routes/registerTruckRoutes")
+const registerDriverRoute=require("./routes/registerDriverRoutes")
 const signUpRoute=require("./routes/signUpRoutes")
 const loginRoute=require("./routes/loginRoutes")
 const contactRoute=require("./routes/contactRoute")
@@ -26,7 +28,9 @@ app.use(express.json())
 //routes
 
 app.use('/',homeRoute)
-app.use('/',registerRoute)
+app.use('/regConductor',registerConductorRoute)
+app.use('/regTruck',registerTruckRoute)
+app.use('/regDriver',registerDriverRoute)
 app.use('/',signUpRoute)
 app.use('/',loginRoute)
 app.use('/',contactRoute)
