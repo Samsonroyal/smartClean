@@ -1,5 +1,8 @@
 //dependencies
 const express =require('express')
+require('dotenv').config();
+const mongoose = require('mongoose');
+require('./models/regDriver');
 //path to file with the variable touter
 const homeRoute=require("./routes/homeRoutes")
 const registerConductorRoute=require("./routes/registerConductorRoutes")
@@ -8,12 +11,29 @@ const registerDriverRoute=require("./routes/registerDriverRoutes")
 const signUpRoute=require("./routes/signUpRoutes")
 const loginRoute=require("./routes/loginRoutes")
 const contactRoute=require("./routes/contactRoute")
-const customerRoute=require("./routes/customerRoutes")
+const customerPageRoute=require("./routes/customerPageRoutes")
+const customerPickUpRoute=require("./routes/customerSchedulePickUpRoutes")
 const adminRoute=require("./routes/adminRoutes")
 
 
 //instatiations
 const app= express()
+
+//db connection
+mongoose.connect(process.env.DATABASE, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  });
+  
+  mongoose.connection
+    .on('open', () => {
+      console.log('Mongoose connection open');
+    })
+    .on('error', (err) => {
+      console.log(`Connection error: ${err.message}`);
+    });
 
 //configurations
 
@@ -34,7 +54,8 @@ app.use('/regDriver',registerDriverRoute)
 app.use('/signUp',signUpRoute)
 app.use('/login',loginRoute)
 app.use('/contact',contactRoute)
-app.use('/',customerRoute)
+app.use('/customerPage',customerPageRoute)
+app.use('/customerSchedulePickUp',customerPickUpRoute)
 app.use('/adminDashboard',adminRoute)
 
 

@@ -21,37 +21,37 @@ html
 
                 .mb-3
                   label.form-label.text-light(for="name") Name
-                  input.form-control(type="text", placeholder="username")
+                  input.form-control(type="text", placeholder="username",name="name")
                 .row
                   .col
                     .mb-3
                       label.form-label.text-light(for="gender") Gender
                       select.form-select(aria-label="Default select example")
-                        option(selected) Male
-                        option(value="1") Female
-                        option(value="2") Other
+                        option(selected, name="gender") Male
+                        option(value="1",name="gender") Female
+                        option(value="2", name="gender") Other
                   .col
                     .mb-3
-                      label.form-label.text-light(for="name") Contact
-                      input.form-control(type="tel", placeholder="+256-xxx-xxxxxx")
+                      label.form-label.text-light(for="contact") Contact
+                      input.form-control(type="tel", placeholder="+256-xxx-xxxxxx", name="telephone")
                 .row
                   .col
                     .mb-3
                       label.form-label.text-light(for="name") Date Of Birth
-                      input.form-control(type="date", placeholder="D.O.B")
+                      input.form-control(type="date", placeholder="D.O.B",name="dob")
                   .col
                     .mb-3
                       label.form-label.text-light(for="residence") Residence
-                      input.form-control(type="text", placeholder="residence")
+                      input.form-control(type="text", placeholder="residence", name="residence")
                 .row
                   .col
                     .mb-3
                       label.form-label.text-light(for="nin") NIN
-                      input.form-control(type="text", placeholder="national id number")
+                      input.form-control(type="text", placeholder="national id number", name="nin")
                   .col
                     .mb-3
                       label.form-label.text-light(for="license") Licence number
-                      input.form-control(type="text", placeholder="license number")
+                      input.form-control(type="text", placeholder="license number", name="licenseNumber")
                 .mb-3
                   label.form-label.text-light(for="name") Police letter
                   input.form-control(type="file" name="fileUpload")

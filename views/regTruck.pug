@@ -17,18 +17,18 @@ html
           .col-lg-6
             #ui
               h2.text-light.text-center Register Truck
-              form.text-center(action)
+              form.text-center(action="/regTruck/regTruck" method="POST")
                 .mb-3
-                  label.form-label.text-light(for="gender") Truck Type
+                  label.form-label.text-light(for="truckType") Truck Type
                   select.form-select(aria-label="Default select example")
-                    option(selected) Sewage Truck
-                    option(value="1") Garbage Truck
+                    option(selected,name="truck") Sewage Truck
+                    option(value="1", name="truck") Garbage Truck
                 .mb-3
-                  label.form-label.text-light(for="nin") Truck Code Number
-                  input.form-control(type="text", placeholder="truck code number")
+                  label.form-label.text-light(for="truckCode") Truck Code Number
+                  input.form-control(type="text", placeholder="truck code number" name="truckCode")
                 .mb-3
-                  label.form-label.text-light(for="nin") Truck Registration Number
-                  input.form-control(type="text", placeholder="reg number")
+                  label.form-label.text-light(for="truckReg") Truck Registration Number
+                  input.form-control(type="text", placeholder="reg number" name="truckReg")
                 .text-center
                   a(href="/adminDashboard")
                     button.btn.btn-success.me-4(type="button").

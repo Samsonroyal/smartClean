@@ -19,18 +19,18 @@ html
               
               Log in to Gabarecycle
               
-            form.form-container.mb-5
+            form.form-container.mb-5(action="." method="POST")
               .mb-3
                 label.form-label(for="exampleInputEmail1") Email address
-                input.form-control#exampleInputEmail1(type="email", aria-describedby="emailHelp")
+                input.form-control#exampleInputEmail1(type="email", aria-describedby="emailHelp",name="email")
               .mb-3
                 label.form-label(for="userRole") User role
                 select.form-select(aria-label="Default select example")
-                  option(selected) Admin
-                  option(value="2") Client
+                  option(selected,name="role") Admin
+                  option(value="2", name="role") Client
               .mb-3
                 label.form-label(for="exampleInputPassword1") Password
-                input.form-control#exampleInputPassword1(type="password")
+                input.form-control#exampleInputPassword1(type="password", name="password")
                 .extra.mt-3.row.justify-content-between
                   .col-6
                     .form-check

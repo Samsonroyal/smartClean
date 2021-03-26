@@ -17,34 +17,34 @@ html
           .col-lg-6
             #ui
               h2.text-light.text-center Register Conductor
-              form.text-center(action)
+              form.text-center(action="/regConductor/regConductor" method="POST")
                 .mb-3
                   label.form-label.text-light(for="name") Name
-                  input.form-control(type="text", placeholder="username")
+                  input.form-control(type="text", placeholder="username", name="name")
                 .row
                   .col
                     .mb-3
                       label.form-label.text-light(for="gender") Gender
                       select.form-select(aria-label="Default select example")
                         option(selected) Male
-                        option(value="1") Female
-                        option(value="2") Other
+                        option(value="1", name="gender") Female
+                        option(value="2", name="gender") Other
                   .col
                     .mb-3
-                      label.form-label.text-light(for="name") Contact
-                      input.form-control(type="tel", placeholder="+256-xxx-xxxxxx")
+                      label.form-label.text-light(for="contact") Contact
+                      input.form-control(type="tel", placeholder="+256-xxx-xxxxxx",name="telephone")
                 .row
                   .col
                     .mb-3
-                      label.form-label.text-light(for="name") Date Of Birth
-                      input.form-control(type="date", placeholder="D.O.B")
+                      label.form-label.text-light(for="dob") Date Of Birth
+                      input.form-control(type="date", placeholder="D.O.B", name="dob")
                   .col
                     .mb-3
                       label.form-label.text-light(for="residence") Residence
-                      input.form-control(type="text", placeholder="residence")
+                      input.form-control(type="text", placeholder="residence", name="residence")
                 .mb-3
                   label.form-label.text-light(for="nin") NIN
-                  input.form-control(type="text", placeholder="national id number")
+                  input.form-control(type="text", placeholder="national id number", name="nin")
                 a(href="/adminDashboard")
                   button.btn.btn-success.me-4(type="button") Back
                 button.btn.btn-success(type="submit") Submit

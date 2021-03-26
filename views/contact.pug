@@ -49,20 +49,20 @@ html
                   a(href="#")
                     i.fab.fa-instagram
           .col-xs-12.col-sm-12.col-md-12.col-lg-6.my-3
-            form.bg-success.contactContainer.px-5.py-5.rounded(action)
+            form.bg-success.contactContainer.px-5.py-5.rounded(action="/contact/contact" method="POST")
               h3.text-center.text-white Contact us
               .mb-3
                 label.form-label.text-light(for="userName") Name
-                input.form-control#exampleFormControlInput1(type="text", placeholder="user name")
+                input.form-control#exampleFormControlInput1(type="text", placeholder="user name", name="name")
               .mb-3
                 label.form-label.text-light(for="exampleFormControlInput1") Email address
-                input.form-control#exampleFormControlInput1(type="email", placeholder="name@example.com")
+                input.form-control#exampleFormControlInput1(type="email", placeholder="name@example.com", name="email")
               .mb-3
                 label.form-label.text-light(for="phoneNumber") Phone
-                input.form-control#exampleFormControlInput1(type="tel", placeholder="+256-xxx-xxxxxx")
+                input.form-control#exampleFormControlInput1(type="tel", placeholder="+256-xxx-xxxxxx", name="telephone" )
               .mb-3
                 label.form-label.text-light(for="message") Message
-                textarea.form-control#exampleFormControlTextarea1(rows="3")
+                textarea.form-control#exampleFormControlTextarea1(rows="3", name="message")
               .text-center
                 button.btn.btn-light.btn-lg.text-success(type="button").
                   

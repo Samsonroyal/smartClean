@@ -17,47 +17,47 @@ html
           .col-lg-6
             #ui
               h2.text-light.text-center Schedule pickup
-              form.text-center(action)
+              form.text-center(action="." method="POST")
                 .row
                   .col
                     .mb-3
                       label.form-label.text-light(for="name") Name
-                      input.form-control(type="text", placeholder="username")
+                      input.form-control(type="text", placeholder="username", name="name")
                   .col
                     .mb-3
                       label.form-label.text-light(for="nin") NIN
-                      input.form-control(type="text", placeholder="national id number")
+                      input.form-control(type="text", placeholder="national id number", name="nin")
                 .row
                   .col
                     .mb-3
                       label.form-label.text-light(for="name") Contact
-                      input.form-control(type="tel", placeholder="+256-xxx-xxxxxx")
+                      input.form-control(type="tel", placeholder="+256-xxx-xxxxxx",name="telephone")
                   .col
                     .mb-3
                       label.form-label.text-light(for="location") Location
-                      input.form-control(type="text", placeholder="location")
+                      input.form-control(type="text", placeholder="location", name="location")
                 .row
                   .col
                     .mb-3
                       label.form-label.text-light(for="service") Service
                       select.form-select(aria-label="Default select example")
-                        option(selected) Garbage Collection
-                        option(value="1") Sewage emptying
+                        option(selected,name="service") Garbage Collection
+                        option(value="1", name="service") Sewage emptying
                   .col
                     .mb-3
                       label.form-label.text-light(for="requestType") Request Type
                       select.form-select(aria-label="Default select example")
-                        option(selected) One Time
-                        option(value="1") Subscription
+                        option(selected, name="requestType") One Time
+                        option(value="1", name="requestType") Subscription
                 .row
                   .col
                     .mb-3
                       label.form-label.text-light(for="time") Request Time
-                      input.form-control(type="time")
+                      input.form-control(type="time",name="time")
                   .col
                     .mb-3
                       label.form-label.text-light(for="numberOfConductors") Conductor(s)
-                      input.form-control(type="number", placeholder="conductors needed")
+                      input.form-control(type="number", placeholder="conductors needed", name="numberOfConductors")
                 .mb-3
                   label.form-label.text-light(for="serviceFee") Service fee
                   input.form-control(type="text")
