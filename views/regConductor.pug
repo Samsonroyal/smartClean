@@ -9,6 +9,7 @@ html
     link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap", rel="stylesheet")
     link(rel="stylesheet", href="/stylesheet/css/bootstrap.min.css")
     link(rel="stylesheet", href="/stylesheet/style.css")
+    link(rel="stylesheet", href="/static/all.css")
   body
     .regConductor
       .container
@@ -17,7 +18,7 @@ html
           .col-lg-6
             #ui
               h2.text-light.text-center Register Conductor
-              form.text-center(action="/regConductor/regConductor" method="POST")
+              form.text-center(action="/regConductor/conductorList" method="POST")
                 .mb-3
                   label.form-label.text-light(for="name") Name
                   input.form-control(type="text", placeholder="username", name="name")
@@ -46,8 +47,13 @@ html
                   label.form-label.text-light(for="nin") NIN
                   input.form-control(type="text", placeholder="national id number", name="nin")
                 a(href="/adminDashboard")
-                  button.btn.btn-success.me-4(type="button") Back
-                button.btn.btn-success(type="submit") Submit
+                  button.btn.btn-success.me-4(type="button") 
+                    i.fas.fa-angle-left.me-2
+                    | Back  
+                button.btn.btn-success(type="submit") 
+                  i.fa.fa-database.me-2
+                  | Submit
           .col-lg-3
     script(src="js/include.js")
     script(src="js/bootstrap.bundle.js")
+    script(src="/static/all.js")

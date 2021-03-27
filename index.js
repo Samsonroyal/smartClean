@@ -2,8 +2,15 @@
 const express =require('express')
 require('dotenv').config();
 const mongoose = require('mongoose');
+//importing models
 require('./models/regDriver');
-//path to file with the variable touter
+require('./models/regConductor');
+require('./models/regTruck');
+require('./models/login');
+require('./models/signUp');
+require('./models/contact');
+require('./models/customerSchedulePickUp');
+//path to file with the variable router
 const homeRoute=require("./routes/homeRoutes")
 const registerConductorRoute=require("./routes/registerConductorRoutes")
 const registerTruckRoute=require("./routes/registerTruckRoutes")

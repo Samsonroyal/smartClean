@@ -20,10 +20,18 @@ const regDriverSchema = new mongoose.Schema({
     unique: true,
     required: "Please Enter NIN",
   },
-  gender: String,
-  fileUpload: String,
-  residence: String,
-  dob: Date,
+  gender: {
+    type: String,
+  },
+  fileUpload: {
+    type: String,
+  },
+  residence: { 
+    type: String 
+  },
+  dob: {
+    type: String,
+  },
 });
 
-module.exports = mongoose.model("regDriver", regDriverSchema);
+module.exports = mongoose.model("Driver", regDriverSchema);

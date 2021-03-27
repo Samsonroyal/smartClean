@@ -9,6 +9,7 @@ html
     link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap", rel="stylesheet")
     link(rel="stylesheet", href="/stylesheet/css/bootstrap.min.css")
     link(rel="stylesheet", href="/stylesheet/style.css")
+    link(rel="stylesheet", href="/static/all.css")
   body
     .regTruck(style="padding-top: 60px")
       .container
@@ -17,12 +18,12 @@ html
           .col-lg-6
             #ui
               h2.text-light.text-center Register Truck
-              form.text-center(action="/regTruck/regTruck" method="POST")
+              form.text-center(action="/regTruck/truckList" method="POST")
                 .mb-3
                   label.form-label.text-light(for="truckType") Truck Type
                   select.form-select(aria-label="Default select example")
-                    option(selected,name="truck") Sewage Truck
-                    option(value="1", name="truck") Garbage Truck
+                    option(selected,name="truckType") Sewage Truck
+                    option(value="1", name="truckType") Garbage Truck
                 .mb-3
                   label.form-label.text-light(for="truckCode") Truck Code Number
                   input.form-control(type="text", placeholder="truck code number" name="truckCode")
@@ -31,11 +32,15 @@ html
                   input.form-control(type="text", placeholder="reg number" name="truckReg")
                 .text-center
                   a(href="/adminDashboard")
-                    button.btn.btn-success.me-4(type="button").
+                    button.btn.btn-success.me-4(type="button")
+                      i.fas.fa-angle-left.me-2
+                      | Back  
+                    
                       
-                      Back
-                      
-                  button.btn.btn-success(type="submit") Submit
+                  button.btn.btn-success(type="submit") 
+                    i.fa.fa-database.me-2
+                    | Submit
           .col-lg-3
     script(src="js/include.js")
     script(src="js/bootstrap.bundle.js")
+    script(src="/static/all.js")

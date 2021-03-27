@@ -9,6 +9,7 @@ html
     link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap", rel="stylesheet")
     link(rel="stylesheet", href="/stylesheet/css/bootstrap.min.css")
     link(rel="stylesheet", href="/stylesheet/style.css")
+    link(rel="stylesheet", href="/static/all.css")
   body
     .regDriver
       .container
@@ -17,7 +18,7 @@ html
           .col-lg-6
             #ui
               h2.text-light.text-center Register Driver
-              form.text-center(method="POST" action="/regDriver/regDriver" enctype="multipart/form-data")
+              form.text-center(method="POST" action="/regDriver/driverList" enctype="multipart/form-data")
 
                 .mb-3
                   label.form-label.text-light(for="name") Name
@@ -56,11 +57,14 @@ html
                   label.form-label.text-light(for="name") Police letter
                   input.form-control(type="file" name="fileUpload")
                 a(href="/adminDashboard")
-                  button.btn.btn-success.me-4(type="button").
+                  button.btn.btn-success.me-4(type="button")
+                    i.fas.fa-angle-left.me-2
+                    | Back
                     
-                    Back
-                    
-                button.btn.btn-success(type="submit") Submit
+                button.btn.btn-success(type="submit") 
+                  i.fa.fa-database.me-2
+                  | Submit
           .col-lg-3
     script(src="js/include.js")
     script(src="js/bootstrap.bundle.js")
+    script(src="/static/all.js")

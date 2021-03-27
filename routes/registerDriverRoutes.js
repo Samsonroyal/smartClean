@@ -19,18 +19,29 @@ var storage = multer.diskStorage({
 });
 var upload = multer({ storage: storage });
 
-router.post("/regDriver", upload.single("fileUpload"), (req, res) => {
-  const driver = new Driver(req.body);
-  driver.fileUpload = req.file.path;
-  driver
-    .save()
-    .then(() => {
-      res.send("Thank you for your registration!");
-    })
-    .catch((err) => {
+router.post('/driverList', upload.single('fileUpload'), async (req, res) => {
+  try {
+      const driver = new Driver(req.body);
+      driver.fileUpload = req.file.path;
+      await driver.save()
+      res.redirect('/regDriver/driverList')
+  }catch(err){
       console.log(err);
-      res.send("Sorry! Something went wrong.");
-    });
-});
+      res.send('Sorry! Something went wrong.');
+  }
+})
+
+//view driver details
+router.get('/driverList', async (req, res) => {
+  try {
+      // find all the data in the Employee collection
+      const driverDetails = await Driver.find();
+      res.render('viewDriver', { users: driverDetails, title: 'Driver List' })
+  } catch (err) {
+      res.send('Failed to retrive driver details');
+  }
+})
+
+
 
 module.exports = router;

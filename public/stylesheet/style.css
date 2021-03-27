@@ -78,10 +78,10 @@ body {
   margin-top: 70px;
   margin-bottom: 60px;
   border-radius: 20px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .regDriver{
-  background-image: url(images/driver.PNG);
+  background-image: url(/images/driver.PNG);
   background-size:cover;
   background-position: center;
   background-attachment: fixed;
@@ -92,7 +92,7 @@ body {
 
 /* regConductor */
 .regConductor{
-  background-image: url(images/jay-clark-GXxX_rklGEo-unsplash.jpg);
+  background-image: url(/images/jay-clark-GXxX_rklGEo-unsplash.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -102,7 +102,7 @@ body {
 
 /* regTruck */
 .regTruck{
-  background-image: url(images/regtruck.PNG);
+  background-image: url(/images/regtruck.PNG);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
