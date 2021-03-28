@@ -17,36 +17,36 @@ html
           .col-lg-3
           .col-lg-6
             #ui
-              h2.text-light.text-center Register Conductor
-              form.text-center(action="/regConductor/conductorList" method="POST")
+              h2.text-light.text-center #{viewTitle}
+              form.text-center(action="/regConductor/conductorList?id="+user._id method="POST")
                 .mb-3
                   label.form-label.text-light(for="name") Name
-                  input.form-control(type="text", placeholder="username", name="name")
+                  input.form-control(type="text", placeholder="username", name="name" value = user.name)
                 .row
                   .col
                     .mb-3
                       label.form-label.text-light(for="gender") Gender
                       select.form-select(aria-label="Default select example" name="gender")
-                        option(value="male") Male
-                        option(value="female") Female
-                        option(value="other") Other
+                        option(value="male",selected=user.gender === "male") Male
+                        option(value="female",selected=user.gender === "female") Female
+                        option(value="other",selected=user.gender === "other") Other
                   .col
                     .mb-3
                       label.form-label.text-light(for="contact") Contact
-                      input.form-control(type="tel", placeholder="+256-xxx-xxxxxx",name="telephone")
+                      input.form-control(type="tel", placeholder="+256-xxx-xxxxxx",name="telephone" value = user.telephone)
                 .row
                   .col
                     .mb-3
                       label.form-label.text-light(for="dob") Date Of Birth
-                      input.form-control(type="date", placeholder="D.O.B", name="dob")
+                      input.form-control(type="date", placeholder="D.O.B", name="dob" value = user.dob)
                   .col
                     .mb-3
                       label.form-label.text-light(for="residence") Residence
-                      input.form-control(type="text", placeholder="residence", name="residence")
+                      input.form-control(type="text", placeholder="residence", name="residence" value = user.residence)
                 .mb-3
                   label.form-label.text-light(for="nin") NIN
-                  input.form-control(type="text", placeholder="national id number", name="nin")
-                a(href="/adminDashboard")
+                  input.form-control(type="text", placeholder="national id number", name="nin" value = user.nin)
+                a(href="/regConductor/conductorList")
                   button.btn.btn-success.me-4(type="button") 
                     i.fas.fa-angle-left.me-2
                     | Back  

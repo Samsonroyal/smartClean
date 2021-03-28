@@ -64,7 +64,7 @@ app.use('/contact',contactRoute)
 app.use('/customerPage',customerPageRoute)
 app.use('/customerSchedulePickUp',customerPickUpRoute)
 app.use('/adminDashboard',adminRoute)
-
+app.use('public/uploadedFiles', express.static(__dirname + 'public/uploadedFiles'));
 
 
 

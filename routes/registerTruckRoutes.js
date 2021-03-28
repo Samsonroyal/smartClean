@@ -33,6 +33,38 @@ router.post('/truckList', async (req, res) => {
     }
   })
   
+    //update truck details
+
+router.get('/update/:id', async (req, res) => {
+    try {
+        const updateTruck = await Truck.findOne({ _id: req.params.id })
+        res.render('updateTruck', { user: updateTruck, viewTitle:'Update Truck' })
+    } catch (err) {
+      console.log(err)
+        res.status(400).send("Unable to find item in the database");
+    }
+  })
+
+  // route to save the updated data
+router.post('/update', async (req, res) => {
+    try {
+        await Truck.findOneAndUpdate({_id:req.query.id}, req.body,{new:true})
+        res.redirect('/regTruck/truckList')
+    } catch (err) {
+        res.status(404).send("Unable to update item in the database");
+    }
+  })
+  
+  //delete truck record from the database
+router.get('/delete/:id', async (req, res) => {
+    try {
+        await Truck.findByIdAndDelete({ _id: req.params.id })
+        res.redirect('/regTruck/truckList')
+    } catch (err) {
+        res.status(400).send("Unable to delete item in the database");
+    }
+  })
+
 
 
 

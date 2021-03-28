@@ -4,21 +4,15 @@ const mongoose = require("mongoose");
 const regDriverSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: "Please Enter  name",
   },
   telephone: {
     type: String,
-    required: "Please Enter  telephone number",
   },
   licenseNumber: {
     type: String,
-    unique: true,
-    required: "Please Enter license number",
   },
   nin: {
     type: String,
-    unique: true,
-    required: "Please Enter NIN",
   },
   gender: {
     type: String,
@@ -26,8 +20,8 @@ const regDriverSchema = new mongoose.Schema({
   fileUpload: {
     type: String,
   },
-  residence: { 
-    type: String 
+  residence: {
+    type: String,
   },
   dob: {
     type: String,

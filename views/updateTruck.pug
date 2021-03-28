@@ -17,21 +17,21 @@ html
           .col-lg-3
           .col-lg-6
             #ui
-              h2.text-light.text-center Register Truck
-              form.text-center(action="/regTruck/truckList" method="POST")
+              h2.text-light.text-center #{viewTitle}
+              form.text-center(action="/regTruck/truckList?id="+user._id method="POST")
                 .mb-3
                   label.form-label.text-light(for="truckType") Truck Type
                   select.form-select(aria-label="Default select example" name="truckType")
-                    option(value="sewageTruck") Sewage Truck
-                    option(value="garbageTruck") Garbage Truck
+                    option(value="sewageTruck",selected=user.truckType === "sewageTruck") Sewage Truck
+                    option(value="garbageTruck",selected=user.truckType === "garbageTruck") Garbage Truck
                 .mb-3
                   label.form-label.text-light(for="truckCode") Truck Code Number
-                  input.form-control(type="text", placeholder="truck code number" name="truckCode")
+                  input.form-control(type="text", placeholder="truck code number" name="truckCode" value = user.truckCode)
                 .mb-3
                   label.form-label.text-light(for="truckReg") Truck Registration Number
-                  input.form-control(type="text", placeholder="reg number" name="truckReg")
+                  input.form-control(type="text", placeholder="reg number" name="truckReg" value = user.truckReg)
                 .text-center
-                  a(href="/adminDashboard")
+                  a(href="/regTruck/truckList")
                     button.btn.btn-success.me-4(type="button")
                       i.fas.fa-angle-left.me-2
                       | Back  
