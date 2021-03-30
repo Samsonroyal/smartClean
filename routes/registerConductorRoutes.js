@@ -61,7 +61,20 @@ router.get('/delete/:id', async (req, res) => {
     }
   })
 
-
+//search using name of Conductor
+router.get('/conductorSearch', async(req,res)=>{
+    // find all data in conductor collection
+    try{
+      let conductorDetails= await Conductor.find()
+      if(req.query.name){
+      conductorDetails= await Conductor.find({ name:req.query.name})
+      }
+      res.render('viewConductor', {users:conductorDetails, title:"Conductor List"})
+    }catch(err){
+      console.log(err)
+      res.send('Failed to retrieve driver Details')
+    }
+  })
 
 
 

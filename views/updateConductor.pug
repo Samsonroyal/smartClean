@@ -18,7 +18,7 @@ html
           .col-lg-6
             #ui
               h2.text-light.text-center #{viewTitle}
-              form.text-center(action="/regConductor/conductorList?id="+user._id method="POST")
+              form.text-center(action="/regConductor/update?id="+user._id method="POST")
                 .mb-3
                   label.form-label.text-light(for="name") Name
                   input.form-control(type="text", placeholder="username", name="name" value = user.name)

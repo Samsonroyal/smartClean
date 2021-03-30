@@ -20,13 +20,18 @@ html
               
               Sign up to Gabarecycle
               
-            form.form-container(action="." method="POST")
+            form.form-container(action="/signUp" method="POST")
               .mb-3
                 label.form-label(for="name") Name
                 input.form-control#exampleFormControlInput1(type="text", placeholder="name", name="name")
               .mb-3
                 label.form-label(for="exampleFormControlInput1") Email address
                 input.form-control#exampleFormControlInput1(type="email", placeholder="name@example.com", name="email")
+              .mb-3
+                label.form-label(for="userRole") User role
+                select.form-select(aria-label="Default select example" name="role")
+                  option(selected value="admin") Admin
+                  option(value="client") Client
               .mb-3
                 label.form-label(for="phone") Phone number
                 input.form-control#exampleFormControlInput1(type="tel", placeholder="+256-xxx-xxxxxx", name="telephone")
@@ -37,7 +42,7 @@ html
                 label.form-label(for="password").
                   
                   Confirm Password
-                input.form-control#exampleFormControlInput1(type="password", placeholder="confirm password", name="password")
+                input.form-control#exampleFormControlInput1(type="password", placeholder="confirm password", name="confirmPassword")
               .extra.mb-3
                 .form-check
                   input.form-check-input#RememberPassword(type="checkbox")

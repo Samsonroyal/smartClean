@@ -65,6 +65,20 @@ router.get('/delete/:id', async (req, res) => {
     }
   })
 
+  //search using name of truck
+router.get('/truckSearch', async(req,res)=>{
+    // find all data in truck collection
+    try{
+      let truckDetails= await Truck.find()
+      if(req.query.truckReg){
+      truckDetails= await Truck.find({ truckReg:req.query.truckReg})
+      }
+      res.render('viewTruck', {users:truckDetails, title:"Truck List"})
+    }catch(err){
+      console.log(err)
+      res.send('Failed to retrieve driver Details')
+    }
+  })
 
 
 

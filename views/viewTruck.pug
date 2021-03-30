@@ -19,6 +19,13 @@ html
                             i.fa.fa-plus
                             | Create New
                         | Truck List
+
+                    form.row(action='/regTruck/truckSearch')
+                        div.col-auto
+                            input.form-control.form-control-sm(name='truckReg' placeholder="Search using (Reg.No) ...")
+                        div.col-auto
+                            button.btn.btn-outline-success.btn-sm.mb-3(type="submit")
+                                i.fas.fa-search    
                     table.table.table-striped.table-hover.mt-5
                         thead.table-dark
                             tr

@@ -18,7 +18,7 @@ html
           .col-lg-6
             #ui
               h2.text-light.text-center #{viewTitle}
-              form.text-center(method="POST" action="/regDriver/driverList?id="+user._id enctype="multipart/form-data")
+              form.text-center(method="POST" action="/regDriver/update?id="+user._id enctype="multipart/form-data")
                 input(type="hidden" name='_id' value= user._id)
                 .mb-3
                   label.form-label.text-light(for="name") Name

@@ -19,15 +19,15 @@ html
               
               Log in to Gabarecycle
               
-            form.form-container.mb-5(action="." method="POST")
+            form.form-container.mb-5(action="/login" method="POST")
               .mb-3
                 label.form-label(for="exampleInputEmail1") Email address
                 input.form-control#exampleInputEmail1(type="email", aria-describedby="emailHelp",name="email")
               .mb-3
                 label.form-label(for="userRole") User role
-                select.form-select(aria-label="Default select example")
-                  option(selected,name="role") Admin
-                  option(value="2", name="role") Client
+                select.form-select(aria-label="Default select example" name="role")
+                  option(selected value="admin") Admin
+                  option(value="client") Client
               .mb-3
                 label.form-label(for="exampleInputPassword1") Password
                 input.form-control#exampleInputPassword1(type="password", name="password")

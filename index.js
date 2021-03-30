@@ -2,6 +2,14 @@
 const express =require('express')
 require('dotenv').config();
 const mongoose = require('mongoose');
+const expressSession = require('express-session')({
+  secret: 'secret',
+  resave: false,
+  saveUninitialized: false
+});
+const passport = require('passport');
+const SignUpDetails = require('./models/signUp')
+
 //importing models
 require('./models/regDriver');
 require('./models/regConductor');
@@ -21,7 +29,6 @@ const contactRoute=require("./routes/contactRoute")
 const customerPageRoute=require("./routes/customerPageRoutes")
 const customerPickUpRoute=require("./routes/customerSchedulePickUpRoutes")
 const adminRoute=require("./routes/adminRoutes")
-
 
 //instatiations
 const app= express()
@@ -51,6 +58,16 @@ app.set('views', './views');
 app.use(express.static('public'));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json())
+app.use(expressSession);
+app.use(passport.initialize());
+app.use(passport.session());
+
+//PASSPORT LOCAL AUTHENTICATION 
+
+passport.use(SignUpDetails.createStrategy());
+
+passport.serializeUser(SignUpDetails.serializeUser());
+passport.deserializeUser(SignUpDetails.deserializeUser());
 
 //routes
 
@@ -65,10 +82,6 @@ app.use('/customerPage',customerPageRoute)
 app.use('/customerSchedulePickUp',customerPickUpRoute)
 app.use('/adminDashboard',adminRoute)
 app.use('public/uploadedFiles', express.static(__dirname + 'public/uploadedFiles'));
-
-
-
-
 
 
 

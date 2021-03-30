@@ -7,7 +7,22 @@ router.get('/',(req,res)=>{
 })
 
 
+router.post('/', async(req,res)=>{
+    try{
+        const signUp = new SignUpDetails(req.body);
+        await SignUpDetails.register(signUp,req.body.password,(err)=>{
+            if(err){
+                throw err
+            }
+            res.redirect('/login')
+        })
+        
+    } catch(err){
+        console.log(err)
+        res.send('Sorry! Something went wrong')
+    }
 
+})
 
 
 

@@ -18,7 +18,7 @@ html
           .col-lg-6
             #ui
               h2.text-light.text-center #{viewTitle}
-              form.text-center(action="/regTruck/truckList?id="+user._id method="POST")
+              form.text-center(action="/regTruck/update?id="+user._id method="POST")
                 .mb-3
                   label.form-label.text-light(for="truckType") Truck Type
                   select.form-select(aria-label="Default select example" name="truckType")

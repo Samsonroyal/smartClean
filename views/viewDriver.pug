@@ -19,7 +19,12 @@ html
                             i.fa.fa-plus
                             | Create New
                         | Driver List
-
+                    form.row(action='/regDriver/driverSearch')
+                        div.col-auto
+                            input.form-control.form-control-sm(name='name' placeholder="Search using (name) ...")
+                        div.col-auto
+                            button.btn.btn-outline-success.btn-sm.mb-3(type="submit")
+                                i.fas.fa-search
 
                     table.table.table-striped.table-hover.mt-5
                         thead.table-dark
