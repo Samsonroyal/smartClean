@@ -52,3 +52,55 @@ body{
     color: white;
 
 }
+header{
+    background-color:#dedede;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    overflow-x: hidden;
+    
+    position: fixed;
+    top: 0;
+    left: 345px;
+    z-index: 100;
+    width: calc(100% - 345px);
+}
+
+.search-wrapper input{
+    height: 100%;
+    padding: .5rem;
+    border: none;
+    outline: none;
+}
+
+.search-wrapper span{
+    display: inline-block;
+    padding: 0rem 1rem;
+    font-size: 1.6rem;
+}
+
+main{
+    
+    min-height: calc(100vh - 90px);
+    padding: 2rem 1.5rem;
+    margin-top: 93px;
+}
+@media only screen and (max-width:1200px){
+    #sidebar{
+        padding-left: 1rem;
+        text-align: center;
+    }
+    li{
+        padding-left: 0rem;
+    }
+}
+@media only screen and (max-width:768px){
+    .search-wrapper{
+        display: none;
+    }
+    header h2{
+        display: none;
+    }
+
+}

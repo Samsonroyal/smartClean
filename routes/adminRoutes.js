@@ -24,7 +24,10 @@ router.get('/truckList',(req,res)=>{
 })
 
 
-
+router.get("/logout", (req, res) => {
+    req.logout();
+    res.redirect("/login");
+  });       
 
 
 

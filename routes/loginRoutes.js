@@ -9,11 +9,12 @@ router.get('/',(req,res)=>{
 //checks email and password
 router.post('/',passport.authenticate('local', {failureRedirect: '/login'}),(req,res)=>{
     req.session.user = req.user;
-    if(req.user.role==client){
-        res.redirect('/customerPage')
-    }else{
-        res.redirect('/dashboard')  
-    }
+    // if(req.user.role.selected=='client'){
+    //     res.redirect('customerPage')
+    // }else if(req.user.role.selected=='admin'){
+    //     res.redirect('dashboard')  
+    // }
+        res.redirect('/adminDashboard')
     
 })
 

@@ -19,7 +19,9 @@ html
                             i.fa.fa-plus
                             | Create New
                         | Truck List
-
+                        a.btn.btn-success.ms-4(href="/adminDashboard")
+                            i.fas.fa-arrow-alt-circle-left
+                            | Back
                     form.row(action='/regTruck/truckSearch')
                         div.col-auto
                             input.form-control.form-control-sm(name='truckReg' placeholder="Search using (Reg.No) ...")

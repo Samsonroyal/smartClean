@@ -1,0 +1,38 @@
+doctype html 
+html 
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    title Update Driver
+    link(rel="preconnect", href="https://fonts.gstatic.com")
+    link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap", rel="stylesheet")
+    link(rel="stylesheet", href="/stylesheet/css/bootstrap.min.css")
+    link(rel="stylesheet", href="/stylesheet/style.css")
+    link(rel="stylesheet", href="/static/all.css")
+  body
+    .regDriver
+      .container
+        .row
+          .col-lg-3
+          .col-lg-6
+            #ui
+              h2.text-light.text-center #{viewTitle}
+              form.text-center(method="POST" action="/regDriver/update?id="+user._id)
+                
+                .mb-3
+                  label.form-label.text-light(for="name") Name
+                  input.form-control(name="name" value = user.name)
+                
+                a(href="/regDriver/driverList")
+                  button.btn.btn-success.me-4(type="button")
+                    i.fas.fa-angle-left.me-2
+                    | Back
+                    
+                button.btn.btn-success(type="submit") 
+                  i.fa.fa-database.me-2
+                  | Submit
+          .col-lg-3
+    script(src="js/include.js")
+    script(src="js/bootstrap.bundle.js")
+    script(src="/static/all.js")

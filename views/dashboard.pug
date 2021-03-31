@@ -92,6 +92,44 @@ html
       button.btn.my-4#menu-btn
         i.fas.fa-bars
       h2 Hello Admin
+      .search-wrapper
+        span.fas.fa-search
+        input(type="search", placeholder="Search here")
+      .d-grid.gap-2.d-md-flex.justify-content-md-end
+        a.btn.btn-success(href="adminDashboard/logout") 
+          i.fas.fa-sign-out-alt
+          |Log Out
+      main 
+        .row
+          .col-sm-6.mb-3
+            .card
+              .card-body
+                h5.card-title.text-center.mb-3 Trucks
+                .text-center.mb-3
+                  i.fas.fa-truck.text-success.display-1
+                a.btn.btn-success(href="/regtruck/truckList") More Details
+          .col-sm-6.mb-3
+            .card
+              .card-body
+                h5.card-title.text-center.mb-3 Drivers
+                .text-center.mb-3
+                  i.fas.fa-user-alt.text-success.display-1
+                a.btn.btn-success(href="/regDriver/driverList") More Details
+        .row
+          .col-sm-6.mb-3
+            .card
+              .card-body
+                h5.card-title.text-center.mb-3 Conductors
+                .text-center.mb-3
+                  i.fas.fa-user-circle.text-success.display-1
+                a.btn.btn-success(href="/regConductor/conductorList") More Details
+          .col-sm-6.mb-3
+            .card
+              .card-body
+                h5.card-title.text-center.mb-3 Customer Requests
+                .text-center.mb-3
+                  i.far.fa-calendar-alt.text-success.display-1
+                a.btn.btn-success(href="/adminDashboard/customerRequest") More Details
     //  end of main content   
     script(src="js/bootstrap.bundle.js")
     script(src="/static/all.js")

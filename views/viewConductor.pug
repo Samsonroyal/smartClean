@@ -19,7 +19,9 @@ html
                             i.fa.fa-plus
                             | Create New
                         | Conductor List
-
+                        a.btn.btn-success.ms-4(href="/adminDashboard")
+                            i.fas.fa-arrow-alt-circle-left
+                            | Back
                     form.row(action='/regConductor/conductorSearch' )
                         div.col-auto
                             input.form-control.form-control-sm(name='name' placeholder="Search using (name) ...")

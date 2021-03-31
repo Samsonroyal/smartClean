@@ -56,11 +56,13 @@ app.set('views', './views');
 
 //middleware
 app.use(express.static('public'));
+app.use('public/uploadedFiles', express.static(__dirname + 'public/uploadedFiles'));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json())
 app.use(expressSession);
 app.use(passport.initialize());
 app.use(passport.session());
+
 
 //PASSPORT LOCAL AUTHENTICATION 
 
@@ -81,7 +83,7 @@ app.use('/contact',contactRoute)
 app.use('/customerPage',customerPageRoute)
 app.use('/customerSchedulePickUp',customerPickUpRoute)
 app.use('/adminDashboard',adminRoute)
-app.use('public/uploadedFiles', express.static(__dirname + 'public/uploadedFiles'));
+
 
 
 
