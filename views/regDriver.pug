@@ -18,7 +18,7 @@ html
           .col-lg-6
             #ui
               h2.text-light.text-center #{viewTitle}
-              form.text-center(method="POST" action="/regDriver/driverList" enctype="multipart/form-data")
+              form.text-center(method="POST" action="/regDriver/driverList" name="driverForm" onsubmit="return validation();" enctype="multipart/form-data" )
                 .mb-3
                   label.form-label.text-light(for="name") Name
                   input.form-control(type="text", placeholder="username",name="name")
@@ -67,3 +67,4 @@ html
     script(src="js/include.js")
     script(src="js/bootstrap.bundle.js")
     script(src="/static/all.js")
+    script(src="js/regDriver.js") 

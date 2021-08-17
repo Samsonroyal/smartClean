@@ -15,9 +15,7 @@ html
             .row
                 .col-md-12.mt-5(style="background-color: #fff; margin-top: 25px; padding: 20px;")
                     h3
-                        a.btn.btn-success.me-4(href)
-                            i.fa.fa-plus
-                            | Respond
+                        
                         | Customer Requests
                         a.btn.btn-success.ms-4(href="/adminDashboard")
                             i.fas.fa-arrow-alt-circle-left
@@ -33,19 +31,23 @@ html
                                 th Request Type
                                 th Time
                                 th No. Of Conductors
+                                th Service Fee
                                 th
                         tbody
-                            tr
-                                td 
-                                td 
-                                td 
-                                td 
-                                td 
-                                td 
-                                td
-                                td 
-                                td
-                                    a(href)
-                                        i.fas.fa-trash-alt.fa-lg.text-success(aria-hidden="true")
+                            for order in orderss
+                                tr
+                                    td #{order.name}
+                                    td #{order.nin}
+                                    td #{order.telephone}
+                                    td #{order.location}
+                                    td #{order.service}
+                                    td #{order.requestType}
+                                    td #{order.time}
+                                    td #{order.numberOfConductors}
+                                    td #{order.serviceFee}
+                                    td
+                                        a(href='/adminDashboard/respondToOrder/'+order._id)
+                                            i.fas.fa-reply.fa-lg.text-success(aria-hidden="true")
         script(src="js/bootstrap.bundle.js")
         script(src="/static/all.js")
+        

@@ -1,0 +1,26 @@
+//process the username and password that are submitted in the login page
+router.post('/', passport.authenticate('local', {failureRedirect: '/login'}), (req,res) =>{
+    req.session.user = req.user;
+    const userRole = roles[req.user.role]
+    
+    if(userRole == 'admin')
+        {
+         res.redirect('/userlist');
+        }
+    else(userRole == 'farmer')
+        {
+        res.redirect('/farmerdash');
+    }
+})
+@dinton
+From Me to Everyone:  09:27 AM
+Thank you Joreen
+From Refactory Catalyst to Everyone:  09:28 AM
+const roles = require('../roles')
+Then I have roles.js file in the root, with the following infor
+var roles = {
+    admin: 'admin',
+    farmer:'farmer',
+    public:'public'
+}
+module.exports = roles

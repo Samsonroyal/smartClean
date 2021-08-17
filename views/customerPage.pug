@@ -16,7 +16,7 @@ html
         .text-center.mb-5
           a(href="index")
             img.rounded.mt-5(src="images/logo3.PNG", alt, style="height: 60px; width: 60px")
-          h2.mt-2 Hello
+          h2.mt-2 Hello #{clientName}
         .row
           .col-sm-6
             a.link-dark(href="customerSchedulePickUp")
@@ -34,18 +34,24 @@ html
                   h5.card-title.text-center Profile
         .row
           .col-sm-6
-            a.link-dark(href)
+            a.link-dark(href="/customerSchedulePickUp/orderList")
               .card.border-success.mb-5(style="width: 75%")
                 .card-body
                   .text-center.mb-3
                     i.fas.fa-history.text-success.display-1
                   h5.card-title.text-center History
           .col-sm-6
-            a.link-dark(href)
+            a.link-dark(href='customerPage/message')
               .card.border-success.mb-5(style="width: 75%")
                 .card-body
                   .text-center.mb-3
                     i.fas.fa-envelope-open-text.text-success.display-1
                   h5.card-title.text-center Messages
+        .row 
+          form(method="post" action='customerPage/logout') 
+            .d-grid.gap-2.d-md-flex.justify-content-md-end
+              button.btn.btn-success.mb-3(type="submit") 
+                i.fas.fa-sign-out-alt
+                |Log Out
     script(src="js/bootstrap.bundle.js")
     script(src="/static/all.js")

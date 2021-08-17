@@ -1,0 +1,52 @@
+doctype html 
+html 
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width,initial-scale=1")
+        title=title
+        link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap", rel="stylesheet")
+        link(rel="preconnect", href="https://fonts.gstatic.com")
+        link(rel="stylesheet", href="/stylesheet/css/bootstrap.min.css")
+        link(rel="stylesheet", href="dashboard.css")
+        link(rel="stylesheet", href="/static/all.css")
+    body.bg-success 
+        .container
+            .row
+                .col-md-12.mt-5(style="background-color: #fff; margin-top: 25px; padding: 20px;")
+                    h3
+                        
+                        | My Orders
+                        a.btn.btn-success.ms-4(href="/customerPage")
+                            i.fas.fa-arrow-alt-circle-left
+                            | Back
+                    table.table.table-striped.table-hover.mt-5
+                        thead.table-dark
+                            tr
+                                th Name
+                                th Nin
+                                th Contact
+                                th Location
+                                th Service
+                                th Request Type
+                                th Time
+                                th No. Of Conductors
+                                th Service Fee
+                                
+                        tbody
+                            if orders.length
+                            each order in orders
+                                tr
+                                    td #{order.name}
+                                    td #{order.nin}
+                                    td #{order.telephone}
+                                    td #{order.location}
+                                    td #{order.service}
+                                    td #{order.requestType}
+                                    td #{order.time}
+                                    td #{order.numberOfConductors}
+                                    td #{order.serviceFee}
+                                    
+        script(src="js/bootstrap.bundle.js")
+        script(src="/static/all.js")
+        

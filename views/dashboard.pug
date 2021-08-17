@@ -8,7 +8,7 @@ html
     link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap", rel="stylesheet")
     link(rel="preconnect", href="https://fonts.gstatic.com")
     link(rel="stylesheet", href="/stylesheet/css/bootstrap.min.css")
-    link(rel="stylesheet", href="stylesheet/dashboard.css")
+    link(rel="stylesheet", href="/stylesheet/dashboard.css")
     link(rel="stylesheet", href="/static/all.css")
   body 
     //  nav bar 
@@ -21,7 +21,7 @@ html
         .display-5.font-weight-bold Gabarecycle
       ul.navbar-nav.d-flex.flex-column.mt-5.w-100
         li.nav-item.w-100
-          a.nav-link.text-light.pl-4(href="#")
+          a.nav-link.text-light.pl-4(href="/")
             i.fas.fa-angle-right
             | Home
 
@@ -75,11 +75,11 @@ html
 
           ul.dropdown-menu.w-100(aria-labelledby="navbarDropdown")
             li
-              a.dropdown-item.text-dark.pl-4.p-2(href="/adminDashboard/CustomerRequest") View Customer Requests
+              a.dropdown-item.text-dark.pl-4.p-2(href="/adminDashboard/customerRequest") View Customer Requests
             li
               hr.dropdown-divider
             li
-              a.dropdown-item.text-dark.pl-4.p-2(href="#") Assign Truck and Driver
+              a.dropdown-item.text-dark.pl-4.p-2(href="/adminDashboard/message") Answered requests
         li.nav-item.w-100
           a.nav-link.text-light.pl-4(href="#")
             i.fas.fa-angle-right
@@ -91,14 +91,15 @@ html
     .p-4.my-container
       button.btn.my-4#menu-btn
         i.fas.fa-bars
-      h2 Hello Admin
-      .search-wrapper
+      h2 Hello #{adminName}
+      div.search-wrapper
         span.fas.fa-search
         input(type="search", placeholder="Search here")
-      .d-grid.gap-2.d-md-flex.justify-content-md-end
-        a.btn.btn-success(href="adminDashboard/logout") 
-          i.fas.fa-sign-out-alt
-          |Log Out
+      form(method="post" action='adminDashboard/logout') 
+        .d-grid.gap-2.d-md-flex.justify-content-md-end
+          button.btn.btn-success(type="submit") 
+            i.fas.fa-sign-out-alt
+            |Log Out
       main 
         .row
           .col-sm-6.mb-3

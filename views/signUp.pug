@@ -4,7 +4,7 @@ html
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width,initial-scale=1")
-    title /Sign Up
+    title Sign Up
     link(rel="preconnect", href="https://fonts.gstatic.com")
     link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap", rel="stylesheet")
     link(rel="stylesheet", href="/stylesheet/css/bootstrap.min.css")
@@ -20,13 +20,13 @@ html
               
               Sign up to Gabarecycle
               
-            form.form-container(action="/signUp" method="POST")
+            form.form-container(action="/signUp" method="POST" name="signUpForm" onsubmit="return validation()")
               .mb-3
                 label.form-label(for="name") Name
-                input.form-control#exampleFormControlInput1(type="text", placeholder="name", name="name")
+                input.form-control(type="text", placeholder="name", name="name")
               .mb-3
                 label.form-label(for="exampleFormControlInput1") Email address
-                input.form-control#exampleFormControlInput1(type="email", placeholder="name@example.com", name="email")
+                input.form-control(type="email", placeholder="name@example.com", name="email")
               .mb-3
                 label.form-label(for="userRole") User role
                 select.form-select(aria-label="Default select example" name="role")
@@ -34,18 +34,18 @@ html
                   option(value="client") Client
               .mb-3
                 label.form-label(for="phone") Phone number
-                input.form-control#exampleFormControlInput1(type="tel", placeholder="+256-xxx-xxxxxx", name="telephone")
+                input.form-control(type="tel", placeholder="+256-xxx-xxxxxx", name="telephone")
               .mb-3
                 label.form-label(for="pwd") Password
-                input.form-control#exampleFormControlInput1(type="password", placeholder="create password", name="password")
+                input.form-control(type="password", placeholder="create password", name="password")
               .mb-3
                 label.form-label(for="password").
                   
                   Confirm Password
-                input.form-control#exampleFormControlInput1(type="password", placeholder="confirm password", name="confirmPassword")
+                input.form-control(type="password", placeholder="confirm password", name="confirmPassword")
               .extra.mb-3
                 .form-check
-                  input.form-check-input#RememberPassword(type="checkbox")
+                  input.form-check-input#tick(type="checkbox" onchange="document.getElementById('terms').disabled = !this.checked;")
                   label.form-check-label(for="RememberPassword")
                     | I agree to Gabarecycle's
 
@@ -58,7 +58,7 @@ html
                     | .
 
               .text-center
-                button.btn.btn-success(type="submit") Sign Up
+                button.btn.btn-success(type="submit" name="terms" id="terms" disabled) Sign Up
             .text-center.pt-5
               | Already have an account?
 
@@ -70,3 +70,4 @@ html
     include footer.pug
     script(src="js/include.js")
     script(src="js/bootstrap.bundle.js")
+    script(src="js/signUp.js") 

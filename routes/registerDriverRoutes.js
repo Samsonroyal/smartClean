@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
   if (req.session.user) {
     res.render("regDriver", { viewTitle: "Register Driver" });
   } else {
-    alert("Please Login");
+    
     res.redirect("/login");
   }
 });
@@ -78,15 +78,20 @@ router.get("/update/:id", async (req, res) => {
 });
 // route to save the updated data
 router.post("/update", async (req, res) => {
-  try {
-    await Driver.findOneAndUpdate({ _id: req.query.id }, req.body, {
-      new: true,
-    });
+  if (req.session.user) {
+    try {
+      await Driver.findOneAndUpdate({ _id: req.query.id }, req.body, {
+        new: true,
+      });
 
-    res.redirect("/regDriver/driverList");
-  } catch (err) {
-    console.log(err);
-    res.status(404).send("Unable to update item in the database");
+      res.redirect("/regDriver/driverList");
+    } catch (err) {
+      console.log(err);
+      res.status(404).send("Unable to update item in the database");
+    }
+  } else {
+    console.log("can't find session");
+    res.redirect("/login");
   }
 });
 
@@ -113,7 +118,6 @@ router.get("/driverSearch", async (req, res) => {
         driverDetails = await Driver.find({ name: req.query.name });
       }
       res.render("viewDriver", { users: driverDetails, title: "Driver List" });
-      
     } catch (err) {
       console.log(err);
       res.send("Failed to retrieve driver Details");

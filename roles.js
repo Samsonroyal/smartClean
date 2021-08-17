@@ -1,6 +1,5 @@
-const ROLES = {
-    Admin: 'qdmin',
-    Client: 'client'
-  }
-  
-  export { ROLES }
+const roles = {
+  admin: "admin",
+  client: "client",
+};
+module.exports = roles;

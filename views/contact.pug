@@ -49,7 +49,7 @@ html
                   a(href="#")
                     i.fab.fa-instagram
           .col-xs-12.col-sm-12.col-md-12.col-lg-6.my-3
-            form.bg-success.contactContainer.px-5.py-5.rounded(action="/contact/contact" method="POST")
+            form.bg-success.contactContainer.px-5.py-5.rounded(action="/contact" method="POST" name="contactForm" onsubmit="return validation()" )
               h3.text-center.text-white Contact us
               .mb-3
                 label.form-label.text-light(for="userName") Name
@@ -64,11 +64,11 @@ html
                 label.form-label.text-light(for="message") Message
                 textarea.form-control#exampleFormControlTextarea1(rows="3", name="message")
               .text-center
-                button.btn.btn-light.btn-lg.text-success(type="button").
+                button.btn.btn-light.btn-lg.text-success(type="submit").
                   
                   Send
                   
     include footer.pug
-    script(src="js/include.js")
+    script(src="js/contact.js")
     script(src="js/bootstrap.bundle.js")
     script(src="/static/all.js")

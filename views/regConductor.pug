@@ -10,6 +10,7 @@ html
     link(rel="stylesheet", href="/stylesheet/css/bootstrap.min.css")
     link(rel="stylesheet", href="/stylesheet/style.css")
     link(rel="stylesheet", href="/static/all.css")
+    script(src="js/backUp.js")
   body
     .regConductor
       .container
@@ -18,7 +19,7 @@ html
           .col-lg-6
             #ui
               h2.text-light.text-center Register Conductor
-              form.text-center(action="/regConductor/conductorList" method="POST")
+              form.text-center(action="/regConductor/conductorList" method="POST" name="conductorForm" onsubmit="return validation();")
                 .mb-3
                   label.form-label.text-light(for="name") Name
                   input.form-control(type="text", placeholder="username", name="name")
@@ -54,6 +55,7 @@ html
                   i.fa.fa-database.me-2
                   | Submit
           .col-lg-3
-    script(src="js/include.js")
+    
     script(src="js/bootstrap.bundle.js")
     script(src="/static/all.js")
+    script(src="js/regConductor.js") 

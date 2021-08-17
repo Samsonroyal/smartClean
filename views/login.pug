@@ -19,7 +19,7 @@ html
               
               Log in to Gabarecycle
               
-            form.form-container.mb-5(action="/login" method="POST")
+            form.form-container.mb-5(action="/login" method="POST" name="loginForm" onsubmit="return validation()")
               .mb-3
                 label.form-label(for="exampleInputEmail1") Email address
                 input.form-control#exampleInputEmail1(type="email", aria-describedby="emailHelp",name="email")
@@ -56,3 +56,4 @@ html
     include footer.pug
     script(src="js/bootstrap.bundle.js")
     script(src="js/include.js")
+    script(src="js/login.js") 

@@ -110,3 +110,14 @@ body {
 }
 
 /* regTruck */
+
+/* customer response */
+.customerResponse{
+  background-image: url(/images/customerrequest.PNG);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+}
+
+/* customer response */

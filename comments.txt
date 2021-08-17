@@ -8,3 +8,77 @@ router.post('/createEmployee', upload.single('imageupload'), (req, res) => {
         res.send('Sorry! Something went wrong.');
     })
 })
+///////////////////////////////////////
+
+// validating nin length
+if (nin.value.length < 13 || nin.value.length > 13) {
+    nin.style.border = '1px solid red';
+    document.getElementById("nin_no").innerHTML = "NIN should be exactly 13characters"
+    return false;
+}
+//////////////////////////////////////
+event.preventDefault();
+//////////////////
+"/customerPage/message?id="+client._id
+//////////////////
+input.form-control(type="text", placeholder="Truck code Number",name="code" id="code" value= truck.truckCode )
+///////////////////////////////////////////////////
+
+const Validate = () => {
+    // var firstname = document.register.firstname;
+    // var lastname = document.register.lastname;
+    // var email = document.register.email;
+    // var gender = document.register.gender;
+    // var country = document.register.country;
+    // var city = document.register.city;
+    // var password = document.register.password;
+  
+    var firstname = document.getElementById("fname")
+    var lastname = document.getElementById("lname")
+    var email = document.getElementById("mail")
+    var female = document.getElementById("female")
+    var male = document.getElementById("male")
+    var country = document.getElementById("count")
+    var city = document.getElementById("cit");
+    var password = document.getElementById("pass");
+  
+  
+    if (firstname.value.length < 3) {
+      alert("please the first name must be atleast 3 letters");
+      return false;
+    }
+
+  
+    if (lastname.value.length < 3) {
+      alert("please the last name must be atleast 3 letters");
+      return false;
+    }
+From Refactory Catalyst to Everyone:  10:29 AM
+const emailregex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!email.value.match(emailregex)) {
+      alert("please put in a correct email address");
+      return false;
+    }
+  
+    if (female.checked == false && male.checked==false) {
+      // if(!(female.checked && male.checked))
+      alert("please select gender");
+      return false;
+    }
+  
+    if (country.value.length < 2) {
+      alert("please fill in a country name with more than 2 characters");
+      return false;
+    }
+  
+    if (city.value == "Default") {
+      // alert("please select a city");
+      city.style.border = "1px solid red"
+      document.getElementsByClassName("message")[1].innerHTML =
+      "Required and must be of length 7 to 12.";
+    document.getElementsByClassName("message")[1].style =
+      "color: red; font-family:Arial, Helvetica, sans-serif;";
+      // document.getElementsByClassName("cityerror").style = "1p
+
+///////////////
+small#dob.innerStyle

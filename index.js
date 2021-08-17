@@ -18,6 +18,7 @@ require('./models/login');
 require('./models/signUp');
 require('./models/contact');
 require('./models/customerSchedulePickUp');
+require('./models/responseToClient');
 //path to file with the variable router
 const homeRoute=require("./routes/homeRoutes")
 const registerConductorRoute=require("./routes/registerConductorRoutes")
